@@ -1,0 +1,25 @@
+Category,Condition / Profile,Impact on Eligibility
+Age Limits,Below 18 years,Not eligible
+Serious Medical Conditions,Advanced heart disease,High chance of rejection
+Serious Medical Conditions,Active or recent cancer,Often rejected
+Serious Medical Conditions,Kidney failure,Often rejected
+Serious Medical Conditions,Severe liver disease,Often rejected
+Serious Medical Conditions,HIV/AIDS,Usually rejected
+Serious Medical Conditions,Major neurological disorders,High risk / rejected
+High-Risk Occupations,Miners,May be declined or loaded
+High-Risk Occupations,Offshore oil rig workers,May be declined or loaded
+High-Risk Occupations,Deep-sea divers,High risk
+High-Risk Occupations,Explosive handlers,High risk
+High-Risk Occupations,Fighter pilots / stunt professionals,High risk
+Dangerous Hobbies,Skydiving / paragliding,Extra premium or rejection
+Dangerous Hobbies,Professional racing,Extra premium or rejection
+Dangerous Hobbies,Rock or ice climbing,Extra premium or rejection
+Dangerous Hobbies,Deep scuba diving,Extra premium or rejection
+Substance Abuse,Heavy smoking,Higher premium
+Substance Abuse,Alcohol addiction,Possible rejection
+Substance Abuse,Drug abuse history,High chance of rejection
+Income Issues,No stable income proof,Not eligible
+,,
+,,
+,,
+,,
