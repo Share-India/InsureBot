@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from 'sonner'
 import './globals.css'
+import { AuthListener } from '@/components/auth-listener'
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans")}>
       <body className={inter.className}>
+        <AuthListener />
         <TooltipProvider>
           {children}
           <Toaster position="bottom-right" />

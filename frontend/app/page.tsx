@@ -155,9 +155,14 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700" htmlFor="password">
-                  Password
-                </label>
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-semibold text-slate-700" htmlFor="password">
+                    Password
+                  </label>
+                  <Link href="/forgot-password" className="font-semibold text-sm text-primary hover:text-primary/80 transition-colors">
+                    Forgot password?
+                  </Link>
+                </div>
                 <input
                   id="password"
                   type="password"
