@@ -17,8 +17,21 @@ export default function ForgotPasswordPage() {
     e.preventDefault()
     setLoading(true)
     setErrorMsg('')
-    
     try {
+      // Verify that the email is actually a registered user in our database via Server Proxy
+      const verifyRes = await fetch('/api/check-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      const verifyData = await verifyRes.json()
+
+      if (!verifyRes.ok || !verifyData.exists) {
+        setErrorMsg('We could not find an account with that email. Please enter your registered email ID.')
+        setLoading(false)
+        return
+      }
+
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`,
       })
