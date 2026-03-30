@@ -45,6 +45,7 @@ conversation_logs.txt
 # Output files
 chat_logs_pdf/
 data/reports/
+data/policy_documents/
 
 # OS generated files
 .DS_Store
