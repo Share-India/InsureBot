@@ -1,0 +1,1480 @@
+{
+    "policies": [
+        {
+            "metadata": {
+                "insurer_name": "Axis Max Life Insurance",
+                "product_name": "Smart Term Plan Plus",
+                "uin": "104N127V04",
+                "product_category": "Non-Linked Non-Participating Individual Pure Risk Life Insurance Plan",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/axis_max-life-smart-term-plan-plus-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Axis_Smart_Term_Policy.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years",
+                    "notes": {
+                        "Regular Cover, Smart Cover, Return of Premium, Income Protection": "Max 65 years",
+                        "Early ROP Plus, Whole Life Cover": "Max 50 years",
+                        "Pay Till 60 Option": "Max 44 years",
+                        "Maternity Cover": "Max 40 years"
+                    }
+                },
+                "maturity_age": {
+                    "min": 28,
+                    "max": 85,
+                    "unit": "years",
+                    "notes": {
+                        "Whole Life Cover": "100 years",
+                        "Maternity Cover": "45 years"
+                    }
+                },
+                "sum_assured": {
+                    "min": 5000000,
+                    "max": "No Limit (Subject to Board Approved Underwriting Policy)",
+                    "currency": "INR",
+                    "notes": "Maternity Cover Sum Assured range: INR 2 Lakhs to 10 Lakhs"
+                },
+                "policy_terms": [
+                    "10 years to 67 years (Regular/Limited Pay variants)",
+                    "50 years to 82 years (Whole Life variant)"
+                ],
+                "premium_payment_terms": [
+                    "Single Pay",
+                    "Regular Pay",
+                    "Limited Pay: 5, 7, 10, 12, 15 years",
+                    "Pay Till 60"
+                ],
+                "premium_payment_frequency": [
+                    "Annual",
+                    "Semi-Annual",
+                    "Quarterly",
+                    "Monthly"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "variant_name": "Regular Cover",
+                    "description": "Base Sum Assured chosen at inception remains level throughout the term. Guaranteed Death Benefit payable on death.",
+                    "return_of_premium": false
+                },
+                {
+                    "variant_name": "Early ROP Plus",
+                    "description": "Returns 50% of total premiums at specific age (Age 60 or Entry Age + PPT + 10). Life cover continues with 50% of Base SA. Remaining 50% premiums returned on maturity.",
+                    "return_of_premium": true
+                },
+                {
+                    "variant_name": "Smart Cover",
+                    "description": "Enhanced Life Cover: 150% of Base Sum Assured payable if death occurs within first 15 policy years. 100% of Base Sum Assured payable thereafter.",
+                    "return_of_premium": false
+                },
+                {
+                    "variant_name": "Return of Premium",
+                    "description": "Life cover throughout the term. 100% of Total Premiums Paid returned on survival till maturity.",
+                    "return_of_premium": true
+                },
+                {
+                    "variant_name": "Whole Life Cover",
+                    "description": "Coverage till age 100. Returns 50% premiums at specific milestone age (Age 60 or Entry Age + PPT + 10). Remaining 50% returned at age 100.",
+                    "return_of_premium": true
+                },
+                {
+                    "variant_name": "Income Protection Cover",
+                    "description": "Death Benefit paid as monthly income for a fixed period (minimum 10 years). Options: Level Income or Inflation Proof Income (increasing by 10% every 3 years).",
+                    "return_of_premium": false
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Higher of: (a) Absolute Amount Assured to be paid on Death, (b) 105% of Total Premiums Paid, (c) 10 times Annualized Premium (for Non-Single Pay) or 1.25 times Single Premium.",
+                "maturity_benefit": "Available only for Return of Premium, Early ROP Plus, and Whole Life variants. Returns Total Premiums Paid (excluding taxes/rider premiums).",
+                "terminal_illness_benefit": "Accelerated benefit: 100% of Guaranteed Death Benefit (up to INR 1 Crore) paid immediately on diagnosis. Future premiums waived for base policy.",
+                "insta_payment_claim": "Accelerated claim payout up to INR 2 Lakhs (depending on SA) paid within 1 working day from claim registration."
+            },
+            "special_features": {
+                "cover_continuance_benefit": {
+                    "description": "Option to defer premium payment for up to 12 months while maintaining full risk cover.",
+                    "availability": "After completion of 3 policy years. Available multiple times with a 5-year gap."
+                },
+                "special_exit_value": {
+                    "description": "Option to surrender policy and receive Total Premiums Paid back at no cost.",
+                    "timing": "Available starting 30th policy year, but not during the last 4 policy years (for policy term >= 40 years)."
+                },
+                "female_lives_benefits": {
+                    "lifeline_plus": "Option for female life insured to avail Top-up SA upon death of spouse.",
+                    "maternity_cover": "Optional rider covering Pregnancy Complications and Congenital Anomalies (Payout up to 50% of Maternity SA).",
+                    "female_life_discount": "Flat 15% discount on premium rates compared to male rates."
+                },
+                "voluntary_top_up": "Option to increase Sum Assured via Top-Up premiums (Minimum INR 5000) during policy term."
+            },
+            "riders": [
+                "Axis Max Life Critical Illness and Disability Rider (UIN: 104B033V02)",
+                "Axis Max Life Waiver of Premium Plus Rider (UIN: 104B029V05)",
+                "Axis Max Life Accidental Death and Dismemberment Rider (UIN: 104B027V05)"
+            ],
+            "discounts": {
+                "salaried_discount": "First Year Discount of 15% (2% for Single Pay).",
+                "existing_customer_discount": "First Year Discount of 15% (2% for Single Pay).",
+                "lifetime_discount": "5% discount for employees/agents throughout PPT.",
+                "high_sum_assured": "Premium rates decrease for higher Sum Assured bands."
+            },
+            "exclusions": {
+                "suicide_clause": "In case of death due to suicide within 12 months of risk commencement/revival, beneficiary receives higher of Surrender Value or Total Premiums Paid."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life",
+                "product_name": "Click 2 Protect Life",
+                "uin": "101N132V05_HDFC",
+                "product_category": "Non-Linked Non-Participating Individual Pure Risk Life Insurance Plan",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/MC_062124237_V01_HDFC_Life_Click_2_Protect_Life_Retail_Brochure_1_6dc8647ccf.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years",
+                    "note": "Whole Life option available"
+                },
+                "policy_terms": [
+                    "Fixed Term",
+                    "Whole Life"
+                ],
+                "premium_payment_terms": [
+                    "Regular Pay",
+                    "Limited Pay",
+                    "Single Pay"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "name": "Life Protect",
+                    "description": "Lump sum payout on death."
+                },
+                {
+                    "name": "Life & CI Rebalance",
+                    "description": "Balances Death and Critical Illness benefits. CI cover increases at each anniversary with a corresponding reduction in Life Cover. Total SA remains constant."
+                },
+                {
+                    "name": "Income Plus",
+                    "description": "Provides life cover for the term and a lump sum payout on maturity along with regular income starting from age 60."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of: Sum Assured, 10 times Annualized Premium, or 105% of Total Premiums Paid.",
+                "income_payouts": "Monthly income of 0.1% of Basic Sum Assured paid in arrears from age 60 until death or maturity (Income Plus Option)."
+            },
+            "special_features": {
+                "return_of_premium": "Option to get 100% of Total Premiums Paid on maturity (available with Life Protect and Income Plus options).",
+                "accidental_death_benefit": "Additional Sum Assured payable on accidental death.",
+                "auto_balance_ci": "Unique feature under Life & CI Rebalance option where premiums are waived upon diagnosis of critical illness and life cover continues."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential",
+                "product_name": "iProtect Smart Plus",
+                "uin": "Non-Linked Non-Participating Life Insurance",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ICICI_Pru_i_Protect_Smart_Plus_Brochure_99bb48758c.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "premium_payment_options": [
+                    "Regular",
+                    "Limited",
+                    "Single"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "name": "Life",
+                    "description": "Death Benefit only."
+                },
+                {
+                    "name": "Life Plus",
+                    "description": "Death Benefit + Accidental Death Benefit (ADB Sum Assured is set at inception)."
+                },
+                {
+                    "name": "Life Rebalancing",
+                    "description": "Death Benefit + Accidental Death Benefit. Sum Assured and ADB SA vary by policy year. ADB drops to 0% after 10th year."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of: Sum Assured on Death, 105% of Total Premiums Paid, 7 times Annualized Premium.",
+                "smart_exit_benefit": "Option to cancel policy and receive Total Premiums Paid (exercisable after 25th policy year, not in last 5 years).",
+                "terminal_illness_benefit": "Accelerated benefit payable on diagnosis."
+            },
+            "special_features": {
+                "premium_break": "Option to skip premium payment for 12 months.",
+                "insta_payment": "Accelerated Death Benefit of ₹3,00,000 on claim intimation within 1 working day.",
+                "payout_options": [
+                    "Lump sum",
+                    "Monthly Income",
+                    "Part Lump sum Part Income"
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life Insurance",
+                "product_name": "Bajaj Allianz eTouch Term Plan",
+                "uin": "116N172V01",
+                "product_category": "Non-Linked Non-Participating Individual Pure Risk Life Insurance Plan",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bajaj_E_Touch_Brochure_be609e8a64.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/etouch-policy-document-116N172V03.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 99,
+                    "unit": "years (for Life Shield options)"
+                },
+                "sum_assured": {
+                    "min": 5000000,
+                    "max": "No Limit"
+                }
+            },
+            "plan_variants": [
+                {
+                    "name": "Life Shield",
+                    "benefits": "Death Benefit + Terminal Illness Benefit."
+                },
+                {
+                    "name": "Life Shield Plus",
+                    "benefits": "Death Benefit + Terminal Illness + Accidental Death Benefit + Waiver of Premium on ATPD."
+                },
+                {
+                    "name": "Life Shield ROP",
+                    "benefits": "Death Benefit + Terminal Illness + Waiver of Premium + Return of Premium on Maturity."
+                }
+            ],
+            "special_features": {
+                "premium_holiday": "Skip premiums for 1, 2, or 3 years.",
+                "early_exit_value": "Available for Life Shield & Life Shield Plus variants to surrender policy and get premiums back after age 60.",
+                "health_management": "Medical second opinion and consultation services."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Ageas Federal Life",
+                "product_name": "Termsurance Life Protection Insurance Plan",
+                "uin": "135N040V03",
+                "product_category": "Non-linked Non-participating Term Insurance",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Termsurance_Life_Protection_Insurance_PD_V2_1_db1c35120a.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 70,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 500000,
+                    "max": "No limit"
+                },
+                "policy_terms": [
+                    "10 to 30 years"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "name": "Pure Protection Option",
+                    "description": "Large cover, low cost. Death benefit is paid to beneficiary."
+                },
+                {
+                    "name": "Return of Premium on Maturity Option",
+                    "description": "Return of 100% of total premiums paid on survival till maturity."
+                }
+            ],
+            "special_features": {
+                "death_benefit_payout": "Guaranteed Death Benefit is highest of SA, 10x Annual Premium, or 105% of premiums paid.",
+                "women_discount": "Premium for female is equal to that of a male 3 years younger.",
+                "high_sum_assured_discount": "Discounts for SA above 10 Lakhs."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life",
+                "product_name": "Smart Shield Plus",
+                "uin": "111N150V01",
+                "product_category": "Non-Linked, Non-Participating, Individual Pure Risk Premium",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Smart_Shield_Plus_Policy_Document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "79 years (Non-Whole Life)",
+                    "note": "100 years for Whole Life option"
+                },
+                "sum_assured": {
+                    "min": 2500000,
+                    "max": "No Limit (Subject to Board Approved Underwriting Policy)",
+                    "currency": "INR"
+                }
+            },
+            "plan_variants": [
+                {
+                    "name": "Level Cover Benefit",
+                    "description": "Sum Assured remains constant throughout the policy term."
+                },
+                {
+                    "name": "Increasing Cover Benefit",
+                    "description": "Sum Assured automatically increases by 5% (simple rate) every year starting from the first policy anniversary, up to a maximum of 200% of original Sum Assured. Increases stop at age 71."
+                },
+                {
+                    "name": "Level Cover with Future Proofing Benefit",
+                    "description": "Option to increase Sum Assured at specific life stages (Marriage, Birth of children, Purchase of house) without medical underwriting."
+                }
+            ],
+            "special_features": {
+                "better_half_benefit": "Ensures spouse automatically gets a life cover in case of life assured's death. 50% of Sum Assured or Rs 50 Lakhs (whichever lower). Future premiums waived.",
+                "premium_holiday": "Option to skip premiums for 1, 2, or 3 years during the policy term.",
+                "terminal_illness_benefit": "Accelerated death benefit where 100% of SA is paid on diagnosis.",
+                "discounts": "Special rates for women, non-tobacco users, and salaried individuals."
+            },
+            "riders": [
+                "SBI Life - Accident Benefit Rider (UIN: 111B041V01)"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life",
+                "product_name": "Smart Protect Plan",
+                "uin": "101L175V10",
+                "product_category": "Unit Linked Non-Participating Individual Life Savings",
+                "brochure_type": "ULIP",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Smart-Protect-Plan-V03-Policy-Bond.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 0,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 100,
+                    "unit": "years"
+                }
+            },
+            "policy_term": {
+                "min": 25,
+                "max": 99,
+                "note": "Years or 99 minus age at entry"
+            },
+            "plan_options": [
+                {
+                    "name": "Level Cover",
+                    "details": "Highest of Sum Assured or Fund Value or 105% Premiums."
+                },
+                {
+                    "name": "Level Cover with Capital Guarantee",
+                    "details": "Offers Minimum Assured Benefit on Maturity."
+                },
+                {
+                    "name": "Decreasing Cover",
+                    "details": "Cover reduces after Level Cover Period."
+                },
+                {
+                    "name": "Decreasing Cover with Capital Guarantee",
+                    "details": "Decreasing cover plus capital guarantee."
+                }
+            ],
+            "loyalty_benefits": [
+                "Return of 2X to 3X Mortality Charges",
+                "Return of 2X Premium Allocation Charges",
+                "Return of FMC on maturity"
+            ],
+            "investment": {
+                "funds": "Choice of 13 funds including Midcap Momentum, Nifty Alpha, etc.",
+                "strategies": "Systematic Transfer Plan available."
+            },
+            "core_benefits": {
+                "death_benefit": "Highest of Sum Assured, Fund Value, or 105% of Total Premiums Paid."
+            },
+            "features": {
+                "premium_waiver": "Available on top of base plan."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life",
+                "product_name": "Click 2 Protect Supreme",
+                "uin": "101N139V06",
+                "product_category": "Non-Linked, Non-Participating, Pure Risk Premium",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Click-2-Protect-Supreme-Plus.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years (Whole Life available)"
+                },
+                "min_sum_assured": 5000000
+            },
+            "plan_variants": [
+                {
+                    "name": "Life Option",
+                    "benefit": "Death Benefit (Lump sum)."
+                },
+                {
+                    "name": "Life Plus Option",
+                    "benefit": "Death Benefit + Accidental Death Benefit."
+                },
+                {
+                    "name": "Life Goal Option",
+                    "benefit": "Sum Assured varies with policy year based on level cover period and amortization rate."
+                }
+            ],
+            "special_features": {
+                "smart_exit": "Cancel policy between age 60 and maturity (if not in last 5 years) and get Total Premiums Paid back.",
+                "parent_secure_option": "Regular income payout to parents/grandparents.",
+                "spouse_cover": "Available to add spouse to the policy.",
+                "instalment_payout": "Receive 100% of death benefit as income for 5-15 years."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life",
+                "product_name": "Smart Swadhan Supreme",
+                "uin": "111N140V02",
+                "product_category": "Non-Linked, Non-Participating, Life Insurance Savings Product",
+                "brochure_type": "Return of Premium",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 75,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 2500000,
+                    "max": "No Limit (Subject to Underwriting)",
+                    "currency": "INR"
+                },
+                "policy_terms": [
+                    "10",
+                    "15",
+                    "30 years"
+                ],
+                "premium_payment_terms": [
+                    "Regular Pay",
+                    "Limited Pay (7, 10, 15 years)"
+                ]
+            },
+            "core_benefits": {
+                "death_benefit": "Higher of: Basic Sum Assured, 11 times Annualised Premium, or 105% of Total Premiums Paid.",
+                "maturity_benefit": "100% of Total Premiums Paid returned on survival to end of policy term."
+            },
+            "key_features": [
+                "100% Return of Premium upon maturity",
+                "Policy term options strictly 10, 15, or 30 years",
+                "High Sum Assured rebate for coverage over specific limits",
+                "Optional Accident Benefit Rider available"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life",
+                "product_name": "Saral Swadhan Supreme",
+                "uin": "111N139V02",
+                "product_category": "Non-Linked, Non-Participating, Life Insurance Savings Product",
+                "brochure_type": "Return of Premium",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Saral_Swadhan_Supreme_Policy_Document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 50,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 65,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 2500000,
+                    "max": 5000000,
+                    "currency": "INR",
+                    "note": "Capped at 50 Lakhs"
+                },
+                "policy_terms": [
+                    "10 to 30 years"
+                ],
+                "premium_payment_terms": [
+                    "Regular Pay"
+                ]
+            },
+            "core_benefits": {
+                "death_benefit": "Higher of: Basic Sum Assured, 11 times Annualised Premium, or 105% of Total Premiums Paid.",
+                "maturity_benefit": "100% of Total Premiums Paid returned on survival to end of policy term."
+            },
+            "key_features": [
+                "Simple issuance for Sum Assured between 25 Lakhs to 50 Lakhs",
+                "Ease of issuance (Saral)",
+                "Accident Benefit Rider option available"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Pramerica Life",
+                "product_name": "RockSolid Term Insurance",
+                "uin": "140N063V03",
+                "product_category": "Non-Linked Non-Participating Individual Pure Risk Life Insurance Plan",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Pramerica_Rocksolid_Term_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Pramerica_Rock_Solid_Policy_Document_1745736601-T&C.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 5000000,
+                    "max": "No Limit (Subject to Board Approved Underwriting Policy)",
+                    "currency": "INR"
+                }
+            },
+            "plan_variants": [
+                {
+                    "name": "Level Cover",
+                    "description": "Standard life cover where Sum Assured remains constant."
+                },
+                {
+                    "name": "Increasing Life Cover",
+                    "description": "Auto increase SA by 25% or 50% at 5th and 10th policy year."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of: Absolute Amount Assured, 105% of Total Premiums Paid, or 1.25x Single Premium/11x Annualized Premium.",
+                "payout_modes": [
+                    "Lumpsum",
+                    "Monthly Income (5/10 years)",
+                    "Lumpsum + Monthly Income"
+                ]
+            },
+            "special_features": {
+                "smart_exit": "Option to exit between age 60-65 and receive Total Premiums Paid back.",
+                "spouse_cover": "Option to extend life cover to spouse.",
+                "life_stage_benefit": "Increase SA on marriage, childbirth, or house purchase.",
+                "limited_pay_option": "Convert Regular Pay to Limited Pay during policy term."
+            },
+            "riders": [
+                "Accidental Death Benefit",
+                "Accidental Total & Permanent Disability",
+                "Critical Illness",
+                "Waiver of Premium"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Kotak Life",
+                "product_name": "e-Term",
+                "uin": "107N129V03",
+                "product_category": "Non-Participating, Non-Linked, Pure Risk",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Kotak-e-Term-Plan-Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/kotak-e-term-policy-document-1.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years",
+                    "note": "Max 75 years for Life Plus Option"
+                },
+                "sum_assured": {
+                    "min": 5100000,
+                    "max": "No limit",
+                    "currency": "INR"
+                }
+            },
+            "plan_variants": [
+                {
+                    "name": "Life Option",
+                    "description": "100% Death Benefit paid on death."
+                },
+                {
+                    "name": "Life Plus Option",
+                    "description": "Death Benefit + Accidental Death Benefit (up to 1 Crore)."
+                },
+                {
+                    "name": "Life Secure Option",
+                    "description": "Death Benefit + Waiver of Premium on Total & Permanent Disability."
+                }
+            ],
+            "special_features": {
+                "step_up_option": "Increase Sum Assured on Marriage or Childbirth.",
+                "step_down_option": "Option to decrease Sum Assured in later years.",
+                "payout_options": [
+                    "Immediate Payout",
+                    "Level Recurring Payout (6% of SA annually for 15 years)",
+                    "Increasing Recurring Payout (starts at 6% of SA, increases by 10% p.a simple)"
+                ],
+                "inbuilt_wellness": "Access to health & wellness management services."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential",
+                "product_name": "iProtect Smart Return of Premium",
+                "uin": "Combination of 105N151V06 and 105N182V02",
+                "product_category": "Combination Solution (Protection + Savings)",
+                "brochure_type": "Return of Premium",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Return_of_Premium_Valid_from_28102024_to_till_date_105N195V01.pdf"
+            },
+            "features": {
+                "description": "This is a combination solution comprising ICICI Pru iProtect Smart (Term) and ICICI Pru Guaranteed Income For Tomorrow (Savings).",
+                "how_it_works": "Life Insurance Benefit from iProtect Smart + Guaranteed Savings from GIFT plan to mimic Return of Premium.",
+                "options": [
+                    {
+                        "name": "Return of Premium as Lumpsum",
+                        "detail": "Guaranteed lump sum benefit at least equal to total premiums paid."
+                    },
+                    {
+                        "name": "Return of Premium as Regular Income",
+                        "detail": "Guaranteed income for 5, 7, or 10 years, totaling at least the premiums paid."
+                    }
+                ]
+            },
+            "core_benefits": {
+                "death_benefit": "Sum Assured from term plan + Death Benefit from savings plan.",
+                "maturity_benefit": "Guaranteed savings payout (effectively the return of premium)."
+            },
+            "additional_covers": [
+                "Accidental Death Benefit",
+                "Critical Illness Benefit"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Generali Central Life",
+                "product_name": "Central Care Plus",
+                "uin": "133N030V06",
+                "product_category": "Non-Linked, Non-Participating, Pure Risk",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Generali_Central_Care_Plus_policy_document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years"
+                },
+                "policy_terms": [
+                    "5 years",
+                    "10 to (85 minus entry age) years"
+                ],
+                "sum_assured": {
+                    "min": 2500000,
+                    "max": "As per Board approved underwriting",
+                    "currency": "INR"
+                }
+            },
+            "variants": [
+                {
+                    "name": "Option 1: Life Cover",
+                    "description": "Standard death benefit on death of life assured."
+                },
+                {
+                    "name": "Option 2: Extra Life Cover",
+                    "description": "Life Cover + Accidental Death Benefit."
+                }
+            ],
+            "key_features": {
+                "claim_service_guarantee": "Claim decision within 2 working days for eligible policies.",
+                "payout_options": [
+                    "Lump sum",
+                    "Fixed Monthly Income",
+                    "Mixed Payout"
+                ],
+                "discounts": "Lower premium rates for women."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life",
+                "product_name": "eTouch II",
+                "uin": "116N172V01",
+                "product_category": "Non-Linked, Non-Participating, Pure Risk",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/etouch-policy-document-116N172V03.pdf"
+            },
+            "variants": [
+                {
+                    "name": "Life Shield",
+                    "coverage": "Death Benefit + Terminal Illness"
+                },
+                {
+                    "name": "Life Shield Plus",
+                    "coverage": "Death Benefit + Terminal Illness + Accidental Death Benefit + Waiver of Premium (on ATPD/TI)"
+                },
+                {
+                    "name": "Life Shield ROP",
+                    "coverage": "Death Benefit + Terminal Illness + Waiver of Premium + Return of Premium on Maturity"
+                }
+            ],
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years (ROP variant min 18, max 65)"
+                },
+                "maturity_age": {
+                    "max": 99,
+                    "unit": "years (ROP variant max 85)"
+                }
+            },
+            "special_features": {
+                "premium_holiday": "Option to skip premiums for 1, 2, or 3 years during the policy term.",
+                "early_exit_value": "Available for Life Shield & Life Shield Plus variants to surrender and get premiums back after Age 60.",
+                "life_stage_upgrade": "Increase SA on marriage, 1st child, 2nd child, or home loan.",
+                "health_management_services": "Medical second opinion and consultation."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aviva Life Insurance",
+                "product_name": "Signature 3D Term Plan",
+                "uin": "122N148V02",
+                "product_category": "Non-Linked Non-Participating Individual Pure Risk",
+                "brochure_type": "Term Insurance",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Policy_Document_3D_Term_Plan.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 80,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": "5 Lakhs (Pure Term), 50.5 Lakhs (Other Variants)"
+                }
+            },
+            "plan_variants": [
+                {
+                    "name": "3D-Pure Term",
+                    "benefits": "Lump sum on Death."
+                },
+                {
+                    "name": "3D-Family Plus",
+                    "benefits": "Lump sum on Death + Regular Monthly Payouts for 10 years (amount increasing by 8% p.a.)."
+                },
+                {
+                    "name": "3D-Accelerated",
+                    "benefits": "Death Benefit + accelerated Terminal Illness benefit (50% of Base SA)."
+                },
+                {
+                    "name": "3D-TROP",
+                    "benefits": "Death Benefit + Return of Premium on Maturity."
+                }
+            ],
+            "key_features": {
+                "3d_protection": "Protects against Death, Disease, and Disability.",
+                "sum_assured_rebate": "High Sum Assured rebates available.",
+                "payout_options": "Special monthly payout increasing annually for Family Plus option."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life",
+                "product_name": "Invest Protect Goal III",
+                "uin": "116N154V02",
+                "product_category": "Non-Linked Non-Participating Individual Life Insurance Savings Plan",
+                "brochure_type": "Savings / Investment with Protection",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bajaj_invest-protect-goal-sl.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/invest-protect-goal-3-pd.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 100,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": "7 x Annualised Premium",
+                    "max": "No Limit (Subject to BAUP)"
+                },
+                "policy_terms": [
+                    "20 to 40 years"
+                ]
+            },
+            "key_features": {
+                "return_of_charges": "Return of Premium Allocation Charge (15th year) & Mortality Charges (milestone based).",
+                "fund_maintenance_booster": "Additional units added if fund value falls below one annualized premium after 4th year.",
+                "loyalty_additions": "Added at 10th, 20th, 30th, 40th years (percentage of fund value).",
+                "family_benefit": "Additional 1% Loyalty Benefit if family member is an existing policyholder.",
+                "investment_funds": "Multiple funds including Equity Growth Fund II, Pure Stock Fund, etc."
+            },
+            "funds": [
+                "Equity Growth Fund II",
+                "Accelerator Mid-Cap Fund II",
+                "Pure Stock Fund",
+                "Bluechip Equity Fund"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Tata AIA Life Insurance",
+                "product_name": "Param Raksha Life Pro +",
+                "uin": "Combination of 110L179V02 (Smart Sampoorna Raksha Supreme) and 110N183V01 (Health Buddy)",
+                "product_category": "Unit Linked Life Insurance Savings Plan (Combination)",
+                "brochure_type": "Unit Linked",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Tata-AIA-Param-Raksha-Life-Pro-plus-Leaflet07.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years",
+                    "note": "Life Cover goes up to 100 years, ADB and ATPD cover up to 85 years."
+                },
+                "premium_payment_terms": [
+                    "5 years for Limited Pay",
+                    "10 years",
+                    "12 years",
+                    "30 years for Regular Pay"
+                ],
+                "policy_terms": [
+                    "30 to 82 years",
+                    "Subject to max age at maturity"
+                ],
+                "min_premium": "20,000 p.a (Limited Pay 5-6 yrs)",
+                "sum_assured": {
+                    "min": "50 Lakhs (Life Cover)",
+                    "max": "No Limit (Life Cover), 5 Crore (ADB and ATPD)"
+                }
+            },
+            "key_features": {
+                "benefits_type": [
+                    "Lump sum death benefit",
+                    "Terminal Illness Payout (50% of SA)",
+                    "Market-linked returns",
+                    "Maturity Booster"
+                ],
+                "unique_features": [
+                    "Maturity Benefit includes Loyalty Additions and Fund Value",
+                    "Includes Tata AIA Health Buddy Plan",
+                    "Accidental Death and Total Permanent Disability covers inbuilt or optional depending on config"
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Tata AIA Life Insurance",
+                "product_name": "Sampoorna Raksha Promise",
+                "uin": "110N176V09",
+                "product_category": "Non-linked, Non-participating, Pure Risk",
+                "brochure_type": "Term Insurance"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 100,
+                    "unit": "years (Whole Life option available)"
+                },
+                "sum_assured": {
+                    "min": 500000,
+                    "max": "No Limit (Subject to Board Approved Policy)"
+                },
+                "premium_payment_options": [
+                    "Regular Pay",
+                    "Limited Pay",
+                    "Single Pay"
+                ]
+            },
+            "variants": [
+                {
+                    "name": "Life Promise",
+                    "description": "Pure risk cover, Sum Assured paid on death"
+                },
+                {
+                    "name": "Life Promise Plus",
+                    "description": "Return of Premium on maturity"
+                },
+                {
+                    "name": "Joint Life Promise",
+                    "description": "Cover for spouse (First Life and Second Life)"
+                },
+                {
+                    "name": "Joint Life Promise Plus",
+                    "description": "Joint life with Return of Premium"
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of 1.25x Single Premium OR 105% of Total Premiums Paid OR Absolute Amount Assured",
+                "terminal_illness": "Accelerated benefit of 50% of Effective SA paid immediately; future premiums waived.",
+                "instant_payout": "INR 3 Lakhs accelerated instant payout within 1 working day upon claim intimation (after 3 years waiting period)."
+            },
+            "special_features": {
+                "flexi_pay_benefit": "Option to defer premiums by up to 12 months.",
+                "payor_accelerator_benefit": "50% of SA advanced on Terminal Illness diagnosis.",
+                "women_benefit": "Premium holiday due to pregnancy (defer premium for 12 months).",
+                "smart_exit": "Surrender value payout options available."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life",
+                "product_name": "Smart Shield Premier",
+                "uin": "111N145V01",
+                "product_category": "Non-Linked, Non-Participating, Pure Risk",
+                "brochure_type": "Term Insurance"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 85,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 20000000,
+                    "max": "No Limit"
+                }
+            },
+            "variants": [
+                {
+                    "name": "Level Cover",
+                    "description": "Sum Assured remains constant throughout the term"
+                },
+                {
+                    "name": "Increasing Cover",
+                    "description": "Sum Assured increases by 10% simple rate at end of every 5th year"
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of: Absolute Amount Assured, 11x Annualized Premium, or 105% of Total Premiums Paid.",
+                "terminal_illness_benefit": "Not specifically highlighted as an accelerated benefit in this specific summary (Focus is on High SA of 2 Crore+)."
+            },
+            "special_features": {
+                "better_half_benefit": "Option to cover spouse.",
+                "death_benefit_payout_modes": [
+                    "Lump sum",
+                    "Monthly Installments",
+                    "Lump sum + Monthly Installments"
+                ]
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC",
+                "product_name": "New Jeevan Amar",
+                "uin": "512N350V02",
+                "product_category": "Non-linked, Non-participating, Pure Risk",
+                "brochure_type": "Term Insurance",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_Jeevan_Amar.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "max": 80,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 2500000,
+                    "max": "No Limit"
+                },
+                "policy_terms": [
+                    "10 to 40 years"
+                ]
+            },
+            "variants": [
+                {
+                    "name": "Level Sum Assured",
+                    "description": "Absolute amount assured remains same."
+                },
+                {
+                    "name": "Increasing Sum Assured",
+                    "description": "SA constant for 5 years, then increases by 10% yearly till 15th year (max 2x Basic SA)."
+                }
+            ],
+            "special_features": {
+                "death_benefit_instalments": "Option to receive death benefit in 5/10/15 year installments.",
+                "women_rates": "Special rates for women."
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential",
+                "product_name": "Protect N Gain",
+                "uin": "105L191V05",
+                "product_category": "Unit Linked Insurance Plan (ULIP)",
+                "brochure_type": "ULIP"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 50,
+                    "unit": "years (Growth variant)"
+                },
+                "premium_payment_terms": [
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12 years"
+                ]
+            },
+            "variants": [
+                {
+                    "name": "Life Option",
+                    "description": "Higher coverage."
+                },
+                {
+                    "name": "Growth Option",
+                    "description": "Focus on wealth accumulation."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": "Highest of Sum Assured, Fund Value, or Minimum Death Benefit (105% premiums).",
+                "maturity_benefit": "Fund Value on maturity."
+            },
+            "investment_options": [
+                "Focus 50 Fund",
+                "India Growth Fund",
+                "Bluechip Fund",
+                "Maximiser V",
+                "Sustainable Equity Fund"
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Go Digit Life Insurance",
+                "product_name": "Digit Glow Term Life Insurance",
+                "uin": "165N005V01",
+                "product_category": "Non-Linked, Non-Participating, Individual Pure Risk Premium Life Insurance Plan",
+                "brochure_type": "Sales Brochure",
+                "marketing_tagline": "A life cover that has flexibility to evolve with your growing needs",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 65,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "min": 19,
+                    "max": 85,
+                    "unit": "years"
+                },
+                "sum_assured": {
+                    "min": 225000,
+                    "max": 10000000,
+                    "currency": "INR",
+                    "note": "Maximum Sum Assured subject to Board approved underwriting policy. Min Sum Assured varies for POS (Point of Sale)."
+                },
+                "policy_terms": [
+                    "1 to 40 years (Limited & Regular Pay)",
+                    "5 to 40 years for POS",
+                    "Single Pay: 1 month to 40 years"
+                ],
+                "premium_payment_terms": [
+                    "Single Pay",
+                    "Limited Pay (5, 10, 15 years)",
+                    "Regular Pay (Equal to Policy Term)"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "variant_name": "Option 1: Life Cover",
+                    "description": "Provides guaranteed death benefit in case of death of Life Assured.",
+                    "death_benefit_structure": "Lump sum death benefit",
+                    "has_maturity_benefit": false,
+                    "inbuilt_optional_benefits_available": true
+                },
+                {
+                    "variant_name": "Option 2: Extra Life Cover",
+                    "description": "Life Cover plus Accidental Death Benefit.",
+                    "death_benefit_structure": "Death Benefit + Accidental Death Benefit Sum Assured",
+                    "has_maturity_benefit": false,
+                    "inbuilt_optional_benefits_available": true
+                }
+            ],
+            "core_benefits": {
+                "death_benefit_logic": "Highest of: a) 105% of total premiums paid, b) 10 times Annualized Premium, c) Sum Assured on Death.",
+                "maturity_benefit_logic": "No maturity benefit.",
+                "accelerated_terminal_illness_benefit": "Inbuilt Optional Benefit: 100% of Death Benefit paid in lump sum on diagnosis; policy terminates thereafter.",
+                "accidental_death_benefit": "Available as 'Option 2' or Inbuilt Optional Benefit B.1. Pays 100% of Sum Assured on Death.",
+                "disability_benefit": "Inbuilt Optional Benefit B.2: Additional Accidental Total and Permanent Disability (ATPD) Benefit. Pays 100% of Sum Assured on Death."
+            },
+            "special_features": {
+                "payout_options": [
+                    "Lump sum",
+                    "Fixed monthly payout",
+                    "Combination of Lump sum and Fixed monthly payout"
+                ],
+                "claim_service_guarantee": "Claim Decision within 2 working days for eligible policies (in-force 3+ years, claim up to 1 Crore). Penalty interest payable if delayed.",
+                "early_termination_value": "For Single Pay: 60% * Single Premium * (Outstanding Term/Policy Term). For Limited Pay (after 3 years): Same formula.",
+                "wellness_benefit": "Includes Doctor on call, Wellness Coach, Lab Services, Pharmacy delivery, Vital monitoring, Medical Wallet, etc."
+            },
+            "riders_available": [
+                "No specific riders listed as separate products; coverage is modular via Inbuilt Optional Benefits (ADB, ATPD, TI)."
+            ],
+            "discounts": [
+                "Lower premium rates for women",
+                "Tax benefits under Income Tax Act"
+            ],
+            "exclusions": [
+                "Suicide within 12 months results in refund of 80% premiums or unexpired risk premium value.",
+                "Accidental Death exclusions: Self-inflicted injury, alcohol/drug abuse, participation in hazardous sports/aviation, war, criminal intent.",
+                "Wellness benefits subject to availability of service providers."
+            ]
+        },
+        {
+            "metadata": {
+                "insurer_name": "Axis Max Life Insurance",
+                "product_name": "Smart Term with Additional Returns ULIP",
+                "uin": "104L128V01",
+                "product_category": "Unit Linked Non-Participating Individual Life Insurance",
+                "brochure_type": "ULIP"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 60,
+                    "unit": "years"
+                },
+                "maturity_age": {
+                    "wealth_variant": {
+                        "min": 38,
+                        "max": 85,
+                        "unit": "years"
+                    },
+                    "whole_life_variant": {
+                        "max": 100,
+                        "unit": "years"
+                    }
+                },
+                "policy_terms": {
+                    "wealth_variant": {
+                        "min": 20,
+                        "max": 67,
+                        "unit": "years"
+                    },
+                    "whole_life_variant": {
+                        "formula": "100 minus entry age"
+                    }
+                },
+                "premium_payment_terms": {
+                    "wealth_variant": {
+                        "limited_pay": 5,
+                        "regular_pay": 20
+                    },
+                    "whole_life_variant": {
+                        "limited_pay": {
+                            "min": 5,
+                            "max": 15
+                        }
+                    }
+                },
+                "minimum_annualised_premium": {
+                    "offline": 20000,
+                    "online_or_isnp": 12000,
+                    "currency": "INR"
+                }
+            },
+            "variants": [
+                {
+                    "name": "Life Secure Variant",
+                    "description": "Lump sum death benefit with market-linked maturity benefit."
+                },
+                {
+                    "name": "3D Life Secure Variant",
+                    "description": "Lump sum death benefit, monthly income for 10 years, funding of future premiums and maturity fund value."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit": {
+                    "life_secure_variant": "Higher of Sum Assured on Death, Fund Value, or 105% of Total Premiums Paid.",
+                    "3d_life_secure_variant": {
+                        "lump_sum": "Higher of Sum Assured or 105% of Total Premiums Paid.",
+                        "monthly_income": "20% of Annualised Premium paid monthly for 10 years.",
+                        "premium_funding": "1x, 2x or 3x of future outstanding premiums funded by insurer."
+                    }
+                },
+                "maturity_benefit": "Fund Value calculated as number of units multiplied by NAV on maturity date."
+            },
+            "key_features": {
+                "return_of_charges": {
+                    "mortality_and_morbidity": {
+                        "start_policy_year": 16,
+                        "rate": {
+                            "year_16_to_25": "200%",
+                            "year_26_onwards": "300%"
+                        }
+                    },
+                    "premium_allocation_charge": {
+                        "credit_years": [
+                            10,
+                            11,
+                            12,
+                            13
+                        ],
+                        "rate": "200%"
+                    },
+                    "policy_administration_charge": {
+                        "rate": "300%",
+                        "credit_timing": "At maturity or age 85, whichever is earlier"
+                    }
+                },
+                "guaranteed_loyalty_additions": {
+                    "wealth_variant": "Last 5 policy years",
+                    "whole_life_variant": "From age (80 − entry age + 1) to (85 − entry age)"
+                },
+                "guaranteed_wealth_booster": {
+                    "start_policy_year": 20,
+                    "frequency": "Every 5 years",
+                    "rate": "3% of fund value"
+                },
+                "lock_in_period": "5 years",
+                "partial_withdrawals": "Allowed after completion of 5 policy years"
+            },
+            "investment_options": {
+                "strategies": [
+                    "Self-Managed Portfolio Strategy",
+                    "Systematic Transfer Plan (STP)",
+                    "Lifecycle Based Portfolio Strategy",
+                    "Trigger Based Portfolio Strategy",
+                    "Dynamic Fund Allocation Strategy"
+                ]
+            },
+            "funds": [
+                {
+                    "fund_name": "Growth Super Fund",
+                    "fund_management_charge": "1.25%"
+                },
+                {
+                    "fund_name": "Balanced Fund",
+                    "fund_management_charge": "1.10%"
+                },
+                {
+                    "fund_name": "Conservative Fund",
+                    "fund_management_charge": "0.90%"
+                },
+                {
+                    "fund_name": "Money Market II Fund",
+                    "fund_management_charge": "0.90%"
+                }
+            ],
+            "charges": {
+                "premium_allocation_charge": {
+                    "policy_year_1": "7%",
+                    "policy_year_2_to_4": "6%",
+                    "policy_year_5_onwards": "Nil"
+                },
+                "policy_administration_charge": {
+                    "rate": "0.41% of annualised premium",
+                    "inflation": "5% per annum compounded",
+                    "monthly_cap": 500
+                },
+                "mortality_charge": "Based on Sum at Risk and attained age",
+                "morbidity_charge": "Applicable only for 3D Life Secure Variant"
+            },
+            "riders": [
+                {
+                    "name": "Axis Max Life Critical Illness and Disability Secure Rider",
+                    "uin": "104A034V02"
+                },
+                {
+                    "name": "Axis Max Life Smart Ultra Protect Rider",
+                    "uin": "104A049V02"
+                }
+            ],
+            "tax_benefits": {
+                "section_80c": "Premiums eligible as per prevailing tax laws",
+                "section_10_10d": "Benefits tax-free subject to conditions",
+                "gst": "Applicable as per prevailing laws"
+            },
+            "free_look_period": {
+                "duration": 30,
+                "unit": "days"
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life",
+                "product_name": "HDFC Life Click 2 Protect Supreme Plus",
+                "uin": "101N189V01",
+                "product_category": "Non-Linked, Non-Participating, Individual, Pure Risk Premium/Savings Life Insurance Plan",
+                "brochure_type": "Sales Brochure",
+                "marketing_tagline": "Shield your family from life’s unpredictable turns.",
+                "launch_status": "New"
+            },
+            "eligibility": {
+                "entry_age": {
+                    "min": 18,
+                    "max": 84,
+                    "unit": "years",
+                    "note": "Max entry age is 84 for 'Life' option and 65 for 'Life Plus' and 'Life Goal' options."
+                },
+                "maturity_age": {
+                    "min": 18,
+                    "max": 85,
+                    "unit": "years",
+                    "note": "Minimum maturity age is 18 years for Life Option, 23 years for others."
+                },
+                "sum_assured": {
+                    "min": 10000,
+                    "max": "No limit (Subject to Board Approved Underwriting Policy)",
+                    "currency": "INR",
+                    "note": "Minimum Basic Sum Assured is INR 50,000 for Entry Age > 65 years. For POS variant, Max SA is INR 25,00,000."
+                },
+                "policy_terms": {
+                    "single_pay": "1 month to 85 years less age at entry (Life Option)",
+                    "regular_pay": "2 years to 67 years (Limited by max maturity age 85)",
+                    "limited_pay": "3 years to 67 years (Limited by max maturity age 85)"
+                },
+                "premium_payment_terms": [
+                    "Single Pay",
+                    "Regular Pay",
+                    "Limited Pay (2 years to any PPT less than PT)"
+                ],
+                "premium_payment_frequencies": [
+                    "Annual",
+                    "Half-Yearly (Conversion Factor: 0.5100)",
+                    "Quarterly (Conversion Factor: 0.2600)",
+                    "Monthly (Conversion Factor: 0.0875)"
+                ]
+            },
+            "plan_variants": [
+                {
+                    "variant_name": "Life Option",
+                    "description": "Life assured covered for death benefit during policy term. Accelerated benefit on Terminal Illness. Option to add Spouse Cover.",
+                    "death_benefit_structure": "Highest of: Sum Assured on Death, 105% of Total Premiums Paid.",
+                    "has_maturity_benefit": false,
+                    "notes": "Maturity benefit available only if Return of Premium (ROP) option is selected."
+                },
+                {
+                    "variant_name": "Life Plus Option",
+                    "description": "Life cover plus Accidental Death Benefit. Accelerated benefit on Terminal Illness.",
+                    "death_benefit_structure": "Death Benefit + Accidental Death Sum Assured.",
+                    "has_maturity_benefit": false,
+                    "notes": "Maturity benefit available only if Return of Premium (ROP) option is selected."
+                },
+                {
+                    "variant_name": "Life Goal Option",
+                    "description": "Sum Assured varies with policy year based on 'Level Cover Period' and 'Amortisation Rate'.",
+                    "death_benefit_structure": "Sum Assured (calculated based on Amortisation Rate) on Death.",
+                    "has_maturity_benefit": false,
+                    "notes": "Not available with POS variant. ROP option not available with this variant."
+                }
+            ],
+            "core_benefits": {
+                "death_benefit_logic": {
+                    "single_pay": "Highest of: 125% of Single Premium, Sum Assured on Maturity, or Basic Sum Assured.",
+                    "other_pay_modes": "Highest of: 10 times Annualized Premium, Sum Assured on Maturity, or Basic Sum Assured."
+                },
+                "terminal_illness_benefit": "Accelerated Death Benefit up to INR 2 Crores on diagnosis. Policy continues for balance Sum Assured if Death Benefit > 2 Crores.",
+                "accidental_death_benefit": "Applicable under Life Plus Option. Additional Sum Assured paid in case of death due to accident within 180 days of accident.",
+                "maturity_benefit_logic": "Return of 100% of Total Premiums Paid if 'Return of Premium (ROP)' option is selected. Otherwise NIL."
+            },
+            "special_features": {
+                "life_stage_option": "Increase Sum Assured without underwriting on Marriage (50%), 1st Child (25%), 2nd Child (25%), or Home Loan (50%). Available for Life/Life Plus options, max age 45.",
+                "smart_exit_benefit": "Option to cancel policy and receive Total Premiums Paid. Exercisable after 25th policy year (excluding last 5 years) and age >= 60.",
+                "premium_break_benefit": "Option to skip premiums for 12 months after 5th policy year. Gap of 5 years required between breaks.",
+                "spouse_cover_option": "Death benefit cover for spouse. Chosen percentage of life assured's SA (max 50%). Premiums waived on Life Assured's death.",
+                "parent_secure_option": "Death benefit payable as installments to parents/grandparents (Nominees aged 50+). No additional premium.",
+                "parent_protect_care": "Death Benefit payable as immediate lump sum followed by regular payouts (Yearly/Monthly). Proportion for regular payouts at least 20%.",
+                "immediate_payout_on_claim": "Accelerated instant Death Benefit up to INR 2 Lacs (for SA < 2Cr) or 5 Lacs (for SA >= 2Cr) paid within 1 working day.",
+                "education_income_benefit": "10% of SA payable annually to beneficiary child (max 10 Lacs) upon death of Life Assured."
+            },
+            "riders_available": [
+                "HDFC Life Income Benefit on Accidental Disability Rider - Non Linked",
+                "HDFC Life Protect Plus Rider - Non Linked (Personal Accident, Cancer, or Accidental Death)",
+                "HDFC Life Health Plus Rider - Non Linked (Critical Illness/Cancer Cover)",
+                "HDFC Life LiveWell Rider - Non Linked (Critical Illness, Hospitalisation, Surgery)"
+            ],
+            "discounts": [
+                "Salaried Customer Discount: 15% for Limited Pay, 12.5% for Regular Pay, 0% for Single Pay (on 1st year premium).",
+                "Female Lives Discount: 15% discount on base premium rates."
+            ],
+            "exclusions": [
+                "Suicide Exclusion: Refund of at least 80% of total premiums paid or Surrender Value if death occurs within 12 months of inception/revival.",
+                "Accidental Death Benefit Exclusions: War, self-inflicted injury, influence of drugs/alcohol, participation in hazardous sports, aviation (except as passenger), breach of law.",
+                "WOP Disability Exclusions: Self-inflicted injury, alcohol/drug abuse, war, nuclear contamination."
+            ]
+        }
+    ]
+}

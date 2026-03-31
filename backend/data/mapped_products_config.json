@@ -1,0 +1,2379 @@
+{
+    "policies": [
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Digi-Term (Plan 876)",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_Digi%20Term%20-%20Sales%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Bima Kavach",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC%20Bima%20Kavach%20Sales%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "New Jeevan Amar",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_Jeevan%20amar_Sales%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Yuva Credit Life",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Lic%20leaflet%20Yuva%20Credit.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/indiafirst-life-saral-jeevan-bima-brochure%20%281%29.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "New Tech-Term",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_New%20Tech%20Term_Sales%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Digi Credit Life",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_Digi%20Credit_Sales%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Yuva Term",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Lic%20leaflet%20Yuva%20Credit.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "LIC of India",
+                "product_name": "Jeevan Kiran",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/LIC_Jeevan%20Kiran%20Sales%20Brochure%20%281%29.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from LIC of India offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Axis Max Life Insurance",
+                "product_name": "Smart Secure Plus Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Axis_SSPP_Leaflet_97519a5f54.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Axis_max_life_smart_secure_plus_plan_prospectus_147c9617eb.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Axis Max Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Axis Max Life Insurance",
+                "product_name": "Smart Term Plan Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Axis_SSPP_Leaflet_97519a5f54.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Axis_Smart_Term_Policy.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Axis Max Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Axis Max Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Axis_Saral_Jeevan_Bima_Leaflet_1668689104.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Axis_Smart_Term_Policy.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Axis Max Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life Insurance",
+                "product_name": "Click 2 Protect Supreme Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/hdfc-life-click-2-protect-supreme-plus.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Click-2-Protect-Supreme-Plus.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from HDFC Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life Insurance",
+                "product_name": "Click 2 Protect Elite Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/hdfc-click-2-protect-elite-plus-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Click-2-Protect-Supreme-Plus.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from HDFC Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life Insurance",
+                "product_name": "Click 2 Protect Ultimate",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/HDFC-life-Click-2-Protect-Ultimate.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Click-2-Protect-Supreme-Plus.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from HDFC Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "HDFC Life Insurance",
+                "product_name": "Sanchay Legacy",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/HDFC-Life-Sanchay-Legacy-Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/HDFC-Life-Smart-Protect-Plan-V03-Policy-Bond.pdf"
+            },
+            "eligibility": {
+                "min_age": 40,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from HDFC Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential Life Insurance",
+                "product_name": "iProtect Super",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ICICI_Pru_iProtect_Super_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from ICICI Prudential Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential Life Insurance",
+                "product_name": "iProtect Return of Premium",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ICICI_Pru_iProtect_Return_of_Premium_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Return_of_Premium_Valid_from_28102024_to_till_date_105N195V01.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from ICICI Prudential Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential Life Insurance",
+                "product_name": "iProtect Smart Return of Premium",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ICICI_Pru_iProtect_Smart_Return_of_Premium_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Return_of_Premium_Valid_from_28102024_to_till_date_105N195V01.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from ICICI Prudential Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ICICI Prudential Life Insurance",
+                "product_name": "iProtect Smart Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ICICI_Pru_i_Protect_Smart_Plus_Brochure_99bb48758c.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from ICICI Prudential Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Kotak Mahindra Life Insurance",
+                "product_name": "Signature Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Kotak_Signature_Term_Plan_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/kotak-e-term-policy-document-1.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Kotak Mahindra Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Kotak Mahindra Life Insurance",
+                "product_name": "Gen2Gen Protect",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Kotak_Gen2Gen_Protect.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/kotak-e-term-policy-document-1.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Kotak Mahindra Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Kotak Mahindra Life Insurance",
+                "product_name": "Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Kotak_Signature_Term_Plan_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/kotak-e-term-policy-document-1.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Kotak Mahindra Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Kotak Mahindra Life Insurance",
+                "product_name": "e-Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Kotak_Signature_Term_Plan_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/kotak-e-term-policy-document-1.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Kotak Mahindra Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aditya Birla Sun Life Insurance",
+                "product_name": "Income Suraksha Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ABSLI_Income_Suraksha_Plan_V01_Brochure_Web_Version_9bc3b2a0c3.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 21,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aditya Birla Sun Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aditya Birla Sun Life Insurance",
+                "product_name": "Salaried Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ABSLI_Salaried_Term_Plan_V02_Brochure_Web_Version_707341271c.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 21,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aditya Birla Sun Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aditya Birla Sun Life Insurance",
+                "product_name": "Life Shield Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ABSLI_Life_Shield_Plan_Leaflet_Insurance.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aditya Birla Sun Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aditya Birla Sun Life Insurance",
+                "product_name": "Super Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/inl_super-suraksha-elite-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aditya Birla Sun Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aditya Birla Sun Life Insurance",
+                "product_name": "Poorna Suraksha Kawach",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/ABSLI_Poorna_Suraksha_Kawach_Plan_Product_Brochure_v1_ba196a37af.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aditya Birla Sun Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Tata AIA Life Insurance",
+                "product_name": "Maha Raksha Supreme Select",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/TATA_Maharaksha_Supreme_Select.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Tata AIA Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Tata AIA Life Insurance",
+                "product_name": "Sampoorna Raksha Promise",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/TATA_Sampoorna_Raksha_Promise_V5_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Tata AIA Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Tata AIA Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/TATA_Saral-Jeevan-Bima-Brochure-Download-Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Tata AIA Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Smart Shield Premier",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Smart_Shield_Premier_Brochure_V01_Without_GST.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Smart_Shield_Premier_Policy_Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Smart Shield Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Life_Smart_Shield_Plus_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Smart_Shield_Plus_Better_Helf_Policy_Document%20copy.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "eShield Insta",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Life_eShield_Insta_Brochure_V01_without_GST.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Smart Swadhan Supreme",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Life_Smart_Swadhan_Supreme_V02_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Smart Swadhan Neo",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Life_Smart_Swadhan_Neo_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Saral Swadhan Supreme",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Life_Saral_Swadhan_Supreme_V02_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Saral_Swadhan_Supreme_Policy_Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SBI Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SBI_Saral_Jeevan_Bima_Brochure_V02_without_GST.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI_Life_Saral_Swadhan_Supreme_Policy_Document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SBI Life Insurance offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss_SaralJeevanBima_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bajaj Allianz Life Insurance offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life Insurance",
+                "product_name": "eTouch II (Life Shield)",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/BALIC-eTouchII-brochure_v5.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/etouch-rop-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bajaj Allianz Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bajaj Allianz Life Insurance",
+                "product_name": "iSecure II",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bajaj-isecure-insurance-plan.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bajaj Allianz Life Insurance offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "Mera Term Plan Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PNB_mmtp_plus_brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "Mera Jeevan Suraksha Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PNB_Jeevan%20Suraksha%20Brochure%20A5_final_tcm47-64000.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "POS Suraksha",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PNB_POS_Suraksha_Sales_Literature.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "DigiProtect Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PNB_digiprotect-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss_SaralJeevanBima_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "PNB MetLife",
+                "product_name": "Aajeevan Suraksha",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PNB_POS_Suraksha_Sales_Literature.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from PNB MetLife offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndusInd Nippon Life",
+                "product_name": "Super Suraksha Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/inl-super-suraksha-plus-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndusInd Nippon Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndusInd Nippon Life",
+                "product_name": "Super Suraksha",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/inl_super-suraksha-elite-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndusInd Nippon Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndusInd Nippon Life",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss_SaralJeevanBima_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndusInd Nippon Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndusInd Nippon Life",
+                "product_name": "Super Suraksha Elite",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/inl_super-suraksha-elite-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndusInd Nippon Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aviva Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Aviva%20-%20Saral%20Jeevan%20Bima%20Plan.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aviva Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aviva Life Insurance",
+                "product_name": "Signature 3D Term Plan - Platinum",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Aviva_3D%20Platinum%20SL.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Aviva_Protection_Plus_Policy%20Document_website_0.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aviva Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aviva Life Insurance",
+                "product_name": "Signature 3D Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Aviva_3D%20Platinum%20SL.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Aviva_Protection_Plus_Policy%20Document_website_0.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aviva Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Aviva Life Insurance",
+                "product_name": "LifeShield Advantage",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Aviva_life_sheild_advantage.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Aviva_Protection_Plus_Policy%20Document_website_0.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Aviva Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Shriram Life",
+                "product_name": "My Spouse Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Shriram%20My%20Spouse%20Term%20Plan%20latest.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Shriram Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Shriram Life",
+                "product_name": "Smart Protection Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Shriram_Smart_Protection_Plan_Prospectus.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Shriram Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Shriram Life",
+                "product_name": "Online Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Shriram_Online%20Term%20Plan%20latest.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Shriram Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Shriram Life",
+                "product_name": "Family Protection Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Shriram_Family_Protection_Plan.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Aviva_Protection_Plus_Policy%20Document_website_0.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Shriram Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Shriram Life",
+                "product_name": "Cash Back Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Shriram_Cash_Back_Term_Plan_updated.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 21,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Shriram Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bharti AXA Life",
+                "product_name": "Flexi Term Pro",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bharti-AXA-Life-Flexi-Term-Pro-Brochure_Updated.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/invest-protect-goal-3-pd.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bharti AXA Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bharti AXA Life",
+                "product_name": "Life Suraksha",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bharti_AXA_Suraksha_Brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bharti AXA Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bharti AXA Life",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bharti_AXA_saral-jeevan-bima-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bharti AXA Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bharti AXA Life",
+                "product_name": "Grameen Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bharti_AXA_grameen-jeevan-bima-brochure_0.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bharti AXA Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Future Generali",
+                "product_name": "Term with Return of Premium",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bandhan%20Life%20iTerm%20Return%20of%20Premium%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Return_of_Premium_Valid_from_28102024_to_till_date_105N195V01.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Future Generali offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Future Generali",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Generali_Central_saral_jeevan_bima_brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Future Generali offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Future Generali",
+                "product_name": "Care Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Generali_Central_Care_Plus_Plan_product_brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Generali_Central_Care_Plus_policy_document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Future Generali offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Ageas Federal",
+                "product_name": "Super Protect Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Ageas_Super_Protect_Brochure_New_Rework_9163154e53.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/invest-protect-goal-3-pd.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Ageas Federal offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Ageas Federal",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss_SaralJeevanBima_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Ageas Federal offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Ageas Federal",
+                "product_name": "Termsurance Life Protection",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Ageas_Life_Termsurance_Life_Protection_Brochure_New_Rework_4b2bd54a59.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Termsurance_Life_Protection_Insurance_PD_V2_1_db1c35120a.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Ageas Federal offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Ageas Federal",
+                "product_name": "iSecure Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Ageas%20Federal%20iSecure%20Brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 21,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Ageas Federal offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Pramerica Life Insurance",
+                "product_name": "RockSolid Term Insurance",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PRAMERICA_ROCKSOLID%20TERM%20INSURANCE_2024_DEC_BROCHURE_V3_1740390243.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Pramerica_Rock_Solid_Policy_Document_1745736601-T%26C.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Pramerica Life Insurance offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Pramerica Life Insurance",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/PRAMERICA_LIFE_SARAL%20JEEVAN_BIMA_2024_DEC_BROCHURE_V5.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Pramerica Life Insurance offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SUD Life",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Sudlife_Saral_Jeevan_Bima_Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SUD Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SUD Life",
+                "product_name": "Smart Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SUD_Smart_Term_Plan_Brochure_2025_Ver_02_f91cc3f07f.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SUD Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SUD Life",
+                "product_name": "Simple Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SUD_Simple%20Term%20Plan%20Brochure_2025%20Ver%2006.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SUD Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SUD Life",
+                "product_name": "Protect Shield Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SUD_Protect%20Shield%20Plus%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SUD Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "SUD Life",
+                "product_name": "e-Lifeline Term Insurance Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/SUD_e-Lifeline%20Term%20Plan%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/SBI-Life-Smart-Swadhan-Supreme-V02_Policy-Document_.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from SUD Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndiaFirst Life",
+                "product_name": "Protect Shield Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/indiafirstlifeprotectshieldplan-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/invest-protect-goal-3-pd.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndiaFirst Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndiaFirst Life",
+                "product_name": "Super Protection Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/indiafirst-life-super-protection-plan-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/Aviva_Protection_Plus_Policy%20Document_website_0.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndiaFirst Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndiaFirst Life",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/indiafirst-life-saral-jeevan-bima-brochure%20%281%29.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndiaFirst Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "IndiaFirst Life",
+                "product_name": "Elite Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/indiafirst-life-elite-term-plan-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from IndiaFirst Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Edelweiss Tokio Life",
+                "product_name": "Saral Jeevan Bima",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss_SaralJeevanBima_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/LIC-s_Jeevan_Amar_Policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Edelweiss Tokio Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Edelweiss Tokio Life",
+                "product_name": "Zindagi Protect Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Edelweiss%20Life_%20Zindagi%20Protect%20Plus_ProductBrochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Edelweiss Tokio Life offering Level Cover.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "ACKO Life",
+                "product_name": "Flexi Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Acko_Life_Brochure_2_5dc18d28ae.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Plus_Valid_from_16012026_to_till_date_UIN_105N205V04.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from ACKO Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Go Digit Life",
+                "product_name": "Digit Glow Lite",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Digit-Glow-Lite-Term-Life-Insurance-Sales-Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Go Digit Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Go Digit Life",
+                "product_name": "Digit Glow Plus",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/digit-glow-plus-term-life-insurance-sales-brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Go Digit Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Go Digit Life",
+                "product_name": "Digit Glow",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Level Cover, Accidental Death Benefit",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Digit-Glow-Term-Life-Insurance-Sales-Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/digit-glow-plus-term-life-insurance-policy-document.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Go Digit Life offering Level Cover, Accidental Death Benefit.",
+                "rop": false,
+                "level_cover": true,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bandhan Life",
+                "product_name": "Bandhan iTerm Prime",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/bandhan-life-iterm-prime-brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bandhan Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bandhan Life",
+                "product_name": "Bandhan iTerm Return of Premium",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bandhan%20Life%20iTerm%20Return%20of%20Premium%20Brochure.pdf",
+                "policy_document_link": "https://insurebot.shareindiainsurance.com/policy_documents/ICICI_Pru_iProtect_Smart_Return_of_Premium_Valid_from_28102024_to_till_date_105N195V01.pdf"
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bandhan Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Bandhan Life",
+                "product_name": "Bandhan iTerm Comfort",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Bandhan%20Life%20iTerm%20Comfort%20Policy%20brochure.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Bandhan Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Canara HSBC Life",
+                "product_name": "Young Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Canara_HSBC_Young_Term_Plan.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Canara HSBC Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Canara HSBC Life",
+                "product_name": "Promise2Protect Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Canara_HSBC_Promise2Protect_Term_Plan.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Canara HSBC Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        },
+        {
+            "metadata": {
+                "insurer_name": "Canara HSBC Life",
+                "product_name": "iSelect Smart360 Term Plan",
+                "product_category": "Term Insurance",
+                "brochure_type": "Term Insurance",
+                "marketing_tagline": "Comprehensive Life Cover",
+                "brochure_link": "https://insurebot.shareindiainsurance.com/brochures/Canara_HSBC_iSelect360_Term_Plan.pdf",
+                "policy_document_link": null
+            },
+            "eligibility": {
+                "min_age": 18,
+                "max_age": 65,
+                "min_income": 0,
+                "sum_assured_min": 500000,
+                "sum_assured_max": 999999999
+            },
+            "features": {
+                "description": "A comprehensive plan from Canara HSBC Life offering Comprehensive Life Cover.",
+                "rop": false,
+                "level_cover": false,
+                "increasing_cover": false,
+                "critical_illness": false
+            }
+        }
+    ]
+}
