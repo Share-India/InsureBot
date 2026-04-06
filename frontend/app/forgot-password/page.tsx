@@ -81,7 +81,7 @@ export default function ForgotPasswordPage() {
                   <p className="text-sm text-slate-600 mb-6 leading-relaxed">
                     We've sent a password reset link to <span className="font-semibold text-slate-900">{email}</span>. Let's get you back on track!
                   </p>
-                  <Link href="/login" className="w-full">
+                  <Link href="/" className="w-full">
                     <Button variant="outline" className="w-full py-5 rounded-xl text-sm font-semibold border-slate-200">
                       Return to Sign in
                     </Button>
@@ -124,7 +124,7 @@ export default function ForgotPasswordPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <Link href="/login" className="inline-flex items-center justify-center text-sm font-semibold text-slate-500 hover:text-slate-800 transition-colors">
+              <Link href="/" className="inline-flex items-center justify-center text-sm font-semibold text-slate-500 hover:text-slate-800 transition-colors">
                  <ArrowLeft className="w-4 h-4 mr-2" />
                  Back to Sign in
               </Link>

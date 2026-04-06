@@ -52,7 +52,7 @@ export default function ChatPage() {
   useEffect(() => {
     if (!authLoading) {
       if (!user) {
-        router.push('/login')
+        router.push('/')
       } else {
         const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
         if (isAdmin) {
@@ -193,7 +193,7 @@ export default function ChatPage() {
               size="icon"
               onClick={async () => {
                 await signOut();
-                router.push('/login');
+                router.push('/');
               }}
               className="rounded-full transition-all text-slate-400 hover:bg-red-50 hover:text-red-500"
               title="Logout"

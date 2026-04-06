@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 export default function ProfilePage() {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [loading, setLoading] = useState(false)
   const [fetching, setFetching] = useState(true)
   const router = useRouter()
@@ -22,11 +23,12 @@ export default function ProfilePage() {
       if (authLoading) return // Wait until auth checks are done
       
       if (!user) {
-        router.push('/login')
+        router.push('/')
         return
       }
 
       setEmail(user.email || '')
+      setPhone(user.phone || '')
 
       const { data, error } = await supabase
         .from('profiles')
@@ -160,6 +162,31 @@ export default function ProfilePage() {
                 </div>
                 <p className="mt-2 text-xs text-slate-500">
                   Email addresses are secured and cannot be changed here.
+                </p>
+              </div>
+
+              {/* Phone Number Field (Disabled) */}
+              <div className="relative group">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Phone Number
+                </label>
+                <div className="relative opacity-60 cursor-not-allowed">
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <span className="text-slate-400 font-bold font-mono">#</span>
+                  </div>
+                  <input
+                    type="tel"
+                    value={phone}
+                    disabled
+                    placeholder="No phone number linked"
+                    className="block w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl bg-slate-50 text-slate-500 cursor-not-allowed"
+                  />
+                  <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                    {phone ? <ShieldCheck className="h-4 w-4 text-emerald-500" /> : null}
+                  </div>
+                </div>
+                <p className="mt-2 text-xs text-slate-500">
+                  Phone numbers are secured by SMS authentication and cannot be changed manually.
                 </p>
               </div>
             </div>

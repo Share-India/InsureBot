@@ -55,7 +55,7 @@ export default function UpdatePasswordPage() {
       setIsSuccess(true)
       // Soft redirect after a few seconds
       setTimeout(() => {
-        router.push('/login')
+        router.push('/')
       }, 3000)
       
     } catch (error: any) {

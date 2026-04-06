@@ -52,7 +52,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     if (authLoading) return
     if (!currentUser) {
-       router.push('/login')
+       router.push('/')
     } else {
        fetchAdminData()
     }
@@ -104,7 +104,7 @@ export default function AdminDashboard() {
       {/* Admin Header */}
       <header className="h-16 bg-slate-900 border-b border-slate-800 shrink-0 px-6 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-4 text-white">
-          <Button variant="ghost" size="icon" onClick={async () => { await signOut(); router.push('/login'); }} className="hover:bg-slate-800 text-slate-400 hover:text-white rounded-full">
+          <Button variant="ghost" size="icon" onClick={async () => { await signOut(); router.push('/'); }} className="hover:bg-slate-800 text-slate-400 hover:text-white rounded-full">
             <LogOut className="h-4 w-4" />
           </Button>
           <div className="h-6 w-px bg-slate-700" />

@@ -219,7 +219,7 @@ export function ChatSidebar({ currentChatId, onChatSelect, onNewChat, triggerUpd
                 <DropdownMenuSeparator className="my-1 bg-slate-100" />
                 <DropdownMenuItem className="cursor-pointer rounded-xl p-2 hover:bg-red-50 focus:bg-red-50 transition-all group outline-none flex items-center gap-3" onClick={async () => {
                   await supabase.auth.signOut();
-                  router.push('/login');
+                  router.push('/');
                 }}>
                   <div className="h-9 w-9 rounded-full bg-red-50 flex items-center justify-center text-red-500 group-hover:bg-red-100 group-hover:scale-105 transition-all">
                     <LogOut className="h-[18px] w-[18px]" />

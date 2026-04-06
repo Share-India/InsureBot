@@ -5,16 +5,12 @@ import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/use-auth'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
 import { toast } from 'sonner'
-import { Shield, Sparkles, Brain, CheckCircle2, Mail, ArrowRight } from 'lucide-react'
+import { Shield, Sparkles, Brain, CheckCircle2 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
-export default function RegisterPage() {
-  const [isRegistered, setIsRegistered] = useState(false)
-  const [name, setName] = useState('')
+export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -23,25 +19,20 @@ export default function RegisterPage() {
   const { user, loading: authLoading } = useAuth()
 
   useEffect(() => {
-    if (!authLoading && user) {
+    if (!authLoading && user && user.email) {
       const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
       router.push(isAdmin ? '/admin' : '/home')
     }
   }, [user, authLoading, router])
 
-  const handleRegister = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setErrorMsg('') // Clear previous errors
 
-    const { data: authData, error } = await supabase.auth.signUp({
+    const { data: authData, error } = await supabase.auth.signInWithPassword({
       email,
       password,
-      options: {
-        data: {
-          full_name: name,
-        }
-      }
     })
 
     if (error) {
@@ -50,20 +41,23 @@ export default function RegisterPage() {
       return
     }
 
-    // Immediately create the profile in public.profiles table so it shows up in the database!
+    // Ensure profile exists in public.profiles table so it shows up in dashboard!
     if (authData?.user) {
+      const name = authData.user.user_metadata?.full_name || authData.user.user_metadata?.name || authData.user.user_metadata?.user_name;
       const isAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
       
-      await supabase.from('profiles').insert({
+      await supabase.from('profiles').upsert({
         id: authData.user.id,
         email: email,
         role: isAdmin ? 'admin' : 'user',
         username: name || email.split('@')[0]
-      }).select().single() // Fire and forget, or wait for it
+      }, { onConflict: 'id' }).select()
     }
 
-    toast.success('Successfully registered! Please check your email to verify your account.')
-    setIsRegistered(true)
+    toast.success('Successfully logged in!')
+    const isUserAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
+    router.push(isUserAdmin ? '/admin' : '/home')
+    router.refresh()
   }
 
   return (
@@ -80,62 +74,23 @@ export default function RegisterPage() {
             </div>
 
             <h2 className="mt-8 text-3xl font-extrabold tracking-tight text-slate-900">
-              Create an account
+              Welcome back
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              Already have an account?{' '}
-              <Link href="/login" className="font-semibold text-primary hover:text-primary/80 transition-colors">
-                Sign in
+              Don&apos;t have an account?{' '}
+              <Link href="/signup" className="font-semibold text-primary hover:text-primary/80 transition-colors">
+                Sign up for free
               </Link>
             </p>
           </motion.div>
 
-          {isRegistered ? (
-            <motion.div 
-               initial={{ opacity: 0, scale: 0.95 }} 
-               animate={{ opacity: 1, scale: 1 }} 
-               transition={{ duration: 0.5, delay: 0.1 }}
-               className="mt-10"
-            >
-              <div className="bg-white rounded-2xl border border-blue-100 p-8 shadow-xl shadow-blue-900/5 text-center flex flex-col items-center">
-                <div className="h-16 w-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6 ring-8 ring-blue-50/50">
-                   <Mail className="h-8 w-8" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Check your inbox</h3>
-                <p className="text-sm text-slate-500 mb-8 leading-relaxed">
-                  We've sent a verification link to <span className="font-semibold text-slate-700">{email}</span>. Please click the link to activate your account and start securing your future.
-                </p>
-                <Link href="/login" className="w-full">
-                  <Button className="w-full py-6 rounded-xl text-base font-semibold group flex items-center justify-center gap-2 shadow-md">
-                    Return to Login
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-          ) : (
-            <motion.div 
-               initial={{ opacity: 0, y: 20 }} 
-               animate={{ opacity: 1, y: 0 }} 
-               transition={{ duration: 0.5, delay: 0.1 }}
-               className="mt-10"
-            >
-              <form onSubmit={handleRegister} className="space-y-5">
-              <div className="space-y-1.5">
-                <label className="text-sm font-semibold text-slate-700" htmlFor="name">
-                  Full Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="John Doe"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="block w-full appearance-none rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all sm:text-sm"
-                />
-              </div>
-
+          <motion.div 
+             initial={{ opacity: 0, y: 20 }} 
+             animate={{ opacity: 1, y: 0 }} 
+             transition={{ duration: 0.5, delay: 0.1 }}
+             className="mt-10"
+          >
+            <form onSubmit={handleLogin} className="space-y-5">
               <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-slate-700" htmlFor="email">
                   Email address
@@ -149,9 +104,6 @@ export default function RegisterPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full appearance-none rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all sm:text-sm"
                 />
-                <p className="text-[11.5px] text-amber-600/90 font-medium leading-tight">
-                  Please enter your email carefully. This cannot be changed later. To use a different email, you'll need to create a new account.
-                </p>
               </div>
 
               <div className="space-y-1.5">
@@ -168,12 +120,10 @@ export default function RegisterPage() {
                   type="password"
                   placeholder="••••••••"
                   required
-                  minLength={6}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="block w-full appearance-none rounded-xl border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all sm:text-sm"
                 />
-                <p className="text-xs text-slate-500 mt-1">Must be at least 6 characters long.</p>
               </div>
 
               {errorMsg && (
@@ -188,12 +138,11 @@ export default function RegisterPage() {
                   className="w-full flex justify-center py-6 px-4 border border-transparent rounded-xl shadow-lg shadow-primary/25 text-base font-semibold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 hover:-translate-y-0.5" 
                   disabled={loading}
                 >
-                  {loading ? 'Setting up your account...' : 'Create account'}
+                  {loading ? 'Signing in...' : 'Sign in'}
                 </Button>
               </div>
             </form>
           </motion.div>
-          )}
         </div>
       </div>
 
