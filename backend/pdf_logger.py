@@ -2,6 +2,7 @@ import os
 import datetime
 import re
 from fpdf import FPDF
+from supabase_client import supabase_admin
 
 def strip_emojis(text):
     """
@@ -141,10 +142,28 @@ def save_chat_to_pdf(messages, final_bot_response):
         pdf.set_text_color(0, 0, 0) # Black
         pdf.multi_cell(0, 6, safe_response)
         
-        # Save
+        # Save locally first
         pdf.output(filepath)
-        print(f"✅ Generated PDF Chat Log: {filepath}")
-        return filepath
+        
+        # Upload to Supabase Cloud Storage
+        try:
+            print(f"    ☁️ Uploading chat log to Supabase: {filename}")
+            with open(filepath, 'rb') as f:
+                supabase_admin.storage.from_('reports').upload(
+                    path=filename,
+                    file=f,
+                    file_options={"content-type": "application/pdf", "upsert": "true"}
+                )
+            # Retrieve Cloud URL
+            cloud_url = supabase_admin.storage.from_('reports').get_public_url(filename)
+            
+            # Clean up local artifact
+            os.remove(filepath)
+            print(f"    ✅ Generated Cloud Chat Log: {cloud_url}")
+            return cloud_url
+        except Exception as upload_err:
+            print(f"    ⚠️ Failed to upload chat log to Supabase, keeping local fallback: {upload_err}")
+            return filepath
         
     except Exception as e:
         print(f"⚠️ Failed to generate PDF Chat Log: {e}")

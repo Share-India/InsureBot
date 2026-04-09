@@ -15,6 +15,7 @@ import { useAuth } from '@/hooks/use-auth'
 import { LogOut, PanelLeftOpen } from 'lucide-react'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { ChatSidebar } from '@/components/chat/sidebar'
+import { supabase } from '@/lib/supabase'
 
 export default function ChatPage() {
   const router = useRouter()
@@ -54,13 +55,17 @@ export default function ChatPage() {
       if (!user) {
         router.push('/')
       } else {
-        const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
-        if (isAdmin) {
-          router.push('/admin')
+        const checkAdmin = async () => {
+          const { data: profile } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+          const isAdmin = profile?.role === 'admin'
+          if (isAdmin) {
+            router.push('/admin')
+          }
         }
+        checkAdmin()
       }
     }
-  }, [user, authLoading, router])
+  }, [user?.id, authLoading, router])
 
   if (authLoading) {
     return (

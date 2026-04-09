@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 import { NextResponse, NextRequest } from 'next/server'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export async function GET(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -21,6 +22,9 @@ export async function GET(request: NextRequest) {
       headers: {
         Authorization: `Bearer ${supabaseServiceKey}`,
         apikey: supabaseServiceKey
+      },
+      fetch: (url, options) => {
+        return fetch(url, { ...options, cache: 'no-store' })
       }
     }
   })
@@ -39,33 +43,26 @@ export async function GET(request: NextRequest) {
       .select('*')
     if (profilesError) console.error("Failed to fetch profiles", profilesError)
 
-    const users = usersData.users.map(u => {
-      const profile = profiles?.find(p => p.id === u.id)
+    const users = (profiles || []).map(p => {
+      const authUser = usersData.users.find(u => u.id === p.id)
       return {
-        id: u.id,
-        email: u.email,
-        name: profile?.username || u.user_metadata?.full_name || u.user_metadata?.name || u.user_metadata?.user_name || 'Anonymous',
-        created_at: u.created_at,
-        last_sign_in_at: u.last_sign_in_at
+        id: p.id,
+        email: p.email || authUser?.email,
+        name: p.fullname || p.username || authUser?.user_metadata?.full_name || 'Anonymous',
+        created_at: authUser?.created_at || new Date().toISOString(),
+        last_sign_in_at: authUser?.last_sign_in_at || null
       }
     })
 
-    const BACKEND_URL = process.env.BACKEND_INTERNAL_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000'
-    let chats = []
-    let messages = []
+    // Direct Supabase Admin DB query instead of brittle Python API ping
+    const { data: rawChats, error: chatsError } = await supabaseAdmin.from('chats').select('*')
+    if (chatsError) console.error("Error fetching chats natively:", chatsError)
     
-    try {
-      const response = await fetch(`${BACKEND_URL}/api/admin/all_chats_and_messages`, { cache: 'no-store' })
-      if (response.ok) {
-        const proxyData = await response.json()
-        chats = proxyData.chats || []
-        messages = proxyData.messages || []
-      } else {
-        console.error("Failed to fetch proxy data", await response.text())
-      }
-    } catch (e) {
-      console.error("Error calling admin proxy route:", e)
-    }
+    const { data: rawMessages, error: messagesError } = await supabaseAdmin.from('messages').select('*')
+    if (messagesError) console.error("Error fetching messages natively:", messagesError)
+
+    const chats = rawChats || []
+    const messages = rawMessages || []
 
     // Return the bundled data to the frontend Dashboard
     return NextResponse.json({

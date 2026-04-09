@@ -32,8 +32,12 @@ export default function RegisterPage() {
   useEffect(() => {
     // Only redirect if the user is fully logged in and has an email registered to prevent kicking Phone-verified partial accounts
     if (!authLoading && user && user.email) {
-      const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
-      router.push(isAdmin ? '/admin' : '/home')
+      const checkRole = async () => {
+        const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+        const isAdmin = data?.role === 'admin'
+        router.push(isAdmin ? '/admin' : '/home')
+      }
+      checkRole()
     }
   }, [user, authLoading, router])
 
@@ -137,11 +141,12 @@ export default function RegisterPage() {
 
     if (updateData?.user) {
       const fullPhone = `${countryCode}${phone.replace(/\s+/g, '')}`
+      // Check if user exists otherwise make them user
       const isAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
       await supabase.from('profiles').upsert({
         id: updateData.user.id,
         email: email,
-        role: isAdmin ? 'admin' : 'user',
+        role: isAdmin ? 'admin' : 'user', // Initial creation fallback
         username: username,
         fullname: name,
         phone_no: fullPhone

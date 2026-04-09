@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { useEffect } from 'react'
+import { supabase } from '@/lib/supabase'
 
 export default function Home() {
   const router = useRouter()
@@ -26,13 +27,17 @@ export default function Home() {
       if (!user) {
         router.push('/')
       } else {
-        const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
-        if (isAdmin) {
-          router.push('/admin')
+        const checkAdmin = async () => {
+          const { data: profile } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+          const isAdmin = profile?.role === 'admin'
+          if (isAdmin) {
+            router.push('/admin')
+          }
         }
+        checkAdmin()
       }
     }
-  }, [user, authLoading, router])
+  }, [user?.id, authLoading, router])
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },

@@ -51,12 +51,12 @@ export default function AdminDashboard() {
   // Wait for auth to load before trying anything
   useEffect(() => {
     if (authLoading) return
-    if (!currentUser) {
+    if (!currentUser?.id) {
        router.push('/')
     } else {
        fetchAdminData()
     }
-  }, [currentUser, authLoading, router])
+  }, [currentUser?.id, authLoading, router])
 
   const fetchAdminData = async () => {
     try {

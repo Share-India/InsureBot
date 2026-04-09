@@ -20,8 +20,12 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (!authLoading && user && user.email) {
-      const isAdmin = user.email?.toLowerCase().includes('admin') || user.email?.toLowerCase() === 'abc12051004@gmail.com';
-      router.push(isAdmin ? '/admin' : '/home')
+      const checkRole = async () => {
+        const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+        const isAdmin = data?.role === 'admin'
+        router.push(isAdmin ? '/admin' : '/home')
+      }
+      checkRole()
     }
   }, [user, authLoading, router])
 
@@ -41,23 +45,15 @@ export default function LoginPage() {
       return
     }
 
-    // Ensure profile exists in public.profiles table so it shows up in dashboard!
     if (authData?.user) {
-      const name = authData.user.user_metadata?.full_name || authData.user.user_metadata?.name || authData.user.user_metadata?.user_name;
-      const isAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
+      // Just check the database directly instead of rewriting it
+      const { data: currentProfile } = await supabase.from('profiles').select('role').eq('id', authData.user.id).single()
       
-      await supabase.from('profiles').upsert({
-        id: authData.user.id,
-        email: email,
-        role: isAdmin ? 'admin' : 'user',
-        username: name || email.split('@')[0]
-      }, { onConflict: 'id' }).select()
+      toast.success('Successfully logged in!')
+      const isUserAdmin = currentProfile?.role === 'admin'
+      router.push(isUserAdmin ? '/admin' : '/home')
+      router.refresh()
     }
-
-    toast.success('Successfully logged in!')
-    const isUserAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
-    router.push(isUserAdmin ? '/admin' : '/home')
-    router.refresh()
   }
 
   return (

@@ -56,6 +56,7 @@ app.add_middleware(
 
 # --- CONFIG CHECK ---
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8000")
 
 # Check for missing or placeholder key
 if not GOOGLE_API_KEY or GOOGLE_API_KEY == "your_gemini_api_key_here":
@@ -157,7 +158,7 @@ You are 'InsureBot' 🤖, an expert, empathetic, and professional insurance advi
     4. Then add `\n\n` (Double Newline).
     5. If `report_link` exists, display it.
   - **Integrity:** Copy strictly character-for-character. DO NOT change filenames.
-  - **Validation:** All links MUST start with `https://insurebot.shareindiainsurance.com/`. If not, do not display.
+  - **Validation:** All links MUST start with `https://insurebot.shareindiainsurance.com/` or `http://127.0.0.1:8000/`. If not, do not display.
   - **On-Demand Requests:** If the user directly asks for a brochure or policy document for a specific plan (e.g., "Give me the brochure for Axis Max Life Smart Secure Plus Plan"), and you have the URL in your "Link Mapping" above, you **MUST** provide it directly using the exact vertical markdown format. Do NOT say you don't have access!
   - **HALLUCINATION ALERT:** If you have NOT called `calculate_insurance_plan` in this turn, you **CANNOT** provide a **personalized report** link. The link will be broken (404). However, you CAN provide standard brochure/policy links if listed in your mapping.
 - **Scope:** Do not say "I cannot answer" if it is a general insurance *concept* or *company* question. Answer it! But for *specific product recommendations* for the user, rely 100% on the tool.
@@ -650,10 +651,26 @@ async def chat_endpoint(request: ChatRequest):
 
                     generate_client_report(profile_for_report, rec_data, output_path)
                     
-                    # Add link to result
-                    local_url = f"https://insurebot.shareindiainsurance.com/reports/{filename}" # Update link to /reports
-                    result["report_link"] = local_url
-                    print(f"    ✅ Generated Report: {local_url}")
+                    # Upload to Supabase Cloud Storage
+                    print(f"    ☁️ Uploading report to Supabase: {filename}")
+                    with open(output_path, 'rb') as f:
+                        # Ensures if the same user generates a new report today, it overwrites properly
+                        supabase_admin.storage.from_('reports').upload(
+                            path=filename,
+                            file=f,
+                            file_options={"content-type": "application/pdf", "upsert": "true"}
+                        )
+                    
+                    # Get persistent global link
+                    cloud_url = supabase_admin.storage.from_('reports').get_public_url(filename)
+                    result["report_link"] = cloud_url
+                    print(f"    ✅ Generated Cloud Report: {cloud_url}")
+                    
+                    # Clean up local artifact
+                    try:
+                        os.remove(output_path)
+                    except Exception as wipe_err:
+                        print(f"    ⚠️ Could not delete local temp report: {wipe_err}")
                     
                 except Exception as e:
                     print(f"    ❌ Report generation failed: {e}")
@@ -743,7 +760,7 @@ async def chat_endpoint(request: ChatRequest):
         # we must scrub the link to prevent 404 errors.
         
         generated_text = final_response["response"]
-        has_report_link = "client_reports/Client_Report" in generated_text
+        has_report_link = "Client_Report_" in generated_text
         
         tool_generated_link = False
         if tool_outputs:
@@ -757,7 +774,7 @@ async def chat_endpoint(request: ChatRequest):
             # Replace the link with a warning
             import re
             # Regex to catch the markdown link [Download Personalized Report](...)
-            cleaned_text = re.sub(r"\[Download Personalized Report\]\(https://insurebot.shareindiainsurance.com/client_reports/Client_Report_.*?\.pdf\)", 
+            cleaned_text = re.sub(r"\[Download Personalized Report\]\(.*?/reports/Client_Report_.*?\.pdf\)", 
                                   "⚠️ *[Report Generation Pending - Please ask 'Generate Report' to retry]*", 
                                   generated_text)
             final_response["response"] = cleaned_text
