@@ -1,32 +1,74 @@
-// Follow this setup guide to integrate the Deno language server with your editor:
-// https://deno.land/manual/getting_started/setup_your_environment
-// This enables autocomplete, go to definition, etc.
-
-// Setup type definitions for built-in Supabase Runtime APIs
 import "@supabase/functions-js/edge-runtime.d.ts"
 
-console.log("Hello from Functions!")
-
 Deno.serve(async (req) => {
-  const { name } = await req.json()
-  const data = {
-    message: `Hello ${name}!`,
-  }
+  try {
+    // 1. Parse payload sent from Supabase Auth Interceptor
+    const payload = await req.json()
+    const { user, sms } = payload
+    
+    if (!user?.phone || !sms?.otp) {
+      return new Response(JSON.stringify({ error: "Missing required auth hook parameters" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      })
+    }
 
-  return new Response(
-    JSON.stringify(data),
-    { headers: { "Content-Type": "application/json" } },
-  )
+    const unformattedMobile = user.phone
+    // Strip `+` from the E.164 number format because MSG91 strictly expects integers e.g. 919876543210
+    const mobileNo = unformattedMobile.replace(/\D/g, '')
+
+    // 2. Load MSG91 Credentials from Secure Environment Variables
+    const authKey = Deno.env.get('MSG91_AUTH_KEY')
+    const templateId = "69d885bc1eb6d273140ae013" 
+    const senderId = "POLSQR"
+
+    if (!authKey) {
+      console.error("MSG91_AUTH_KEY strictly missing from vault!")
+      return new Response(JSON.stringify({ error: "Server Configuration Error" }), { status: 500 })
+    }
+
+    // 3. Construct MSG91 Transactional Flow Payload
+    const msg91Payload = {
+      template_id: templateId,
+      short_url: "0",
+      recipients: [
+        {
+          mobiles: mobileNo,
+          OTP: sms.otp // Maps to the ##OTP## tag we configured in MSG91 dashboard
+        }
+      ]
+    }
+
+    console.log(`📡 Sending OTP ${sms.otp} to ${mobileNo} via MSG91...`)
+
+    // 4. Dispatch SMS Request
+    const response = await fetch("https://control.msg91.com/api/v5/flow/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "authkey": authKey
+      },
+      body: JSON.stringify(msg91Payload)
+    })
+
+    const msg91ResponseData = await response.json()
+
+    if (!response.ok) {
+      console.error("❌ MSG91 API Failure:", msg91ResponseData)
+      return new Response(JSON.stringify({ error: "Upstream SMS Provider Failure" }), { status: 502 })
+    }
+
+    console.log("✅ MSG91 Request Successful:", msg91ResponseData)
+
+    // 5. Return success callback back to Supabase Auth so it can mark OTP as generated 
+    return new Response(JSON.stringify({ status: "success" }), {
+      headers: { "Content-Type": "application/json" },
+      status: 200,
+    })
+
+  } catch (error) {
+    console.error("❌ Edge Function crash:", error)
+    return new Response(JSON.stringify({ error: "Internal Edge Hook Error" }), { status: 500 })
+  }
 })
 
-/* To invoke locally:
-
-  1. Run `supabase start` (see: https://supabase.com/docs/reference/cli/supabase-start)
-  2. Make an HTTP request:
-
-  curl -i --location --request POST 'http://127.0.0.1:54321/functions/v1/msg91-sms' \
-    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0' \
-    --header 'Content-Type: application/json' \
-    --data '{"name":"Functions"}'
-
-*/
