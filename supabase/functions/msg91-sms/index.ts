@@ -19,8 +19,8 @@ Deno.serve(async (req) => {
 
     // 2. Load MSG91 Credentials from Secure Environment Variables
     const authKey = Deno.env.get('MSG91_AUTH_KEY')
-    const templateId = "69d885bc1eb6d273140ae013" 
-    const senderId = "POLSQR"
+    const templateId = Deno.env.get('MSG91_TEMPLATE_ID')
+    const senderId = Deno.env.get('MSG91_SENDER_ID') || "SHARBR" // Fallback just in case
 
     if (!authKey) {
       console.error("MSG91_AUTH_KEY strictly missing from vault!")
@@ -34,7 +34,8 @@ Deno.serve(async (req) => {
       recipients: [
         {
           mobiles: mobileNo,
-          OTP: sms.otp // Maps to the ##OTP## tag we configured in MSG91 dashboard
+          alphanumeric: "InsureBot", // Maps to ##alphanumeric## in the DLT template
+          numeric: sms.otp           // Maps to ##numeric## in the DLT template for the OTP
         }
       ]
     }
