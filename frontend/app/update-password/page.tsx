@@ -17,16 +17,38 @@ export default function UpdatePasswordPage() {
   const router = useRouter()
 
   useEffect(() => {
-    // Optional: Check if the user really has a valid session from the email link
-    const checkSession = async () => {
-      const { data } = await supabase.auth.getSession()
-      if (!data.session) {
-        // If they navigate here manually without the reset token, they'll likely fail the update
-        // We can just let the update fail rather than force redirecting to prevent race conditions on slow loads
+    const handleManualSession = async () => {
+      // Handle the Implicit Grant Flow (old standard or PKCE disabled)
+      if (typeof window !== 'undefined' && window.location.hash) {
+        const hashParams = new URLSearchParams(window.location.hash.substring(1))
+        const access_token = hashParams.get('access_token')
+        const refresh_token = hashParams.get('refresh_token')
+
+        if (access_token && refresh_token) {
+          await supabase.auth.setSession({ access_token, refresh_token })
+          setTimeout(() => {
+            router.replace(window.location.pathname) // Clean url via Next.js router instead of raw window
+          }, 100)
+          return
+        }
+      }
+
+      // Handle the PKCE Flow (new standard for Supabase)
+      if (typeof window !== 'undefined' && window.location.search) {
+        const queryParams = new URLSearchParams(window.location.search)
+        const code = queryParams.get('code')
+        if (code) {
+          await supabase.auth.exchangeCodeForSession(code)
+          setTimeout(() => {
+            router.replace(window.location.pathname)
+          }, 100)
+          return
+        }
       }
     }
-    checkSession()
-  }, [])
+
+    handleManualSession()
+  }, [router])
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -46,6 +68,14 @@ export default function UpdatePasswordPage() {
     }
 
     try {
+      // Proactively check session to provide a better error experience if they reload or lose it.
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) {
+        setErrorMsg('Security token expired or missing. Please request a new password reset email.')
+        setLoading(false)
+        return
+      }
+
       const { error } = await supabase.auth.updateUser({
         password: password,
       })

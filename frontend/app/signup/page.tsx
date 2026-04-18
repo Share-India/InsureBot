@@ -140,17 +140,7 @@ export default function RegisterPage() {
     }
 
     if (updateData?.user) {
-      const fullPhone = `${countryCode}${phone.replace(/\s+/g, '')}`
-      // Check if user exists otherwise make them user
-      const isAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
-      await supabase.from('profiles').upsert({
-        id: updateData.user.id,
-        email: email,
-        role: isAdmin ? 'admin' : 'user', // Initial creation fallback
-        username: username,
-        fullname: name,
-        phone_no: fullPhone
-      }).select().single()
+      // Profile creation is now deferred until the user logs in after email verification
     }
 
     toast.success('Account setup complete! Please check your email.')

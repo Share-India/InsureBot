@@ -18,11 +18,12 @@ export default function ForgotPasswordPage() {
     setLoading(true)
     setErrorMsg('')
     try {
+      const cleanEmail = email.trim()
       // Verify that the email is actually a registered user in our database via Server Proxy
       const verifyRes = await fetch('/api/check-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email: cleanEmail })
       })
       const verifyData = await verifyRes.json()
 
@@ -32,7 +33,7 @@ export default function ForgotPasswordPage() {
         return
       }
 
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const { error } = await supabase.auth.resetPasswordForEmail(cleanEmail, {
         redirectTo: `${window.location.origin}/update-password`,
       })
       if (error) throw error

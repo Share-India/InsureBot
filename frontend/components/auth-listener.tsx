@@ -5,16 +5,15 @@ import { supabase } from '@/lib/supabase'
 
 export function AuthListener() {
   useEffect(() => {
-    // 1. Initial Load Check
-    if (typeof window !== 'undefined' && window.location.hash.includes('type=recovery')) {
-      window.location.href = '/update-password'
-    }
+    // Supabase automatically parses #access_token=...&type=recovery hash. We don't need to manually strip it.
 
     // 2. Active Subscription Check
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
-        if (_event === 'PASSWORD_RECOVERY') {
-          window.location.href = '/update-password'
+        if (_event === 'PASSWORD_RECOVERY' && typeof window !== 'undefined') {
+          if (window.location.pathname !== '/update-password') {
+            window.location.href = '/update-password'
+          }
         }
       }
     )

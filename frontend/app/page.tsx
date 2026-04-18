@@ -20,12 +20,30 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (!authLoading && user && user.email) {
-      const checkRole = async () => {
-        const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single()
-        const isAdmin = data?.role === 'admin'
-        router.push(isAdmin ? '/admin' : '/home')
+      const checkAndCreateRole = async () => {
+        // Use maybeSingle to safely check existence without throwing error
+        const { data: currentProfile } = await supabase.from('profiles').select('role').eq('id', user.id).maybeSingle()
+        
+        let finalRole = currentProfile?.role
+
+        // Lazy creation if profile doesn't exist (e.g. they just finished Email Verification)
+        if (!currentProfile) {
+          const isAdmin = user.email.toLowerCase().includes('admin') || user.email.toLowerCase() === 'abc12051004@gmail.com';
+          finalRole = isAdmin ? 'admin' : 'user'
+          
+          await supabase.from('profiles').upsert({
+            id: user.id,
+            email: user.email,
+            role: finalRole,
+            username: user.user_metadata?.username || '',
+            fullname: user.user_metadata?.full_name || '',
+            phone_no: user.phone || ''
+          })
+        }
+
+        router.push(finalRole === 'admin' ? '/admin' : '/home')
       }
-      checkRole()
+      checkAndCreateRole()
     }
   }, [user, authLoading, router])
 
@@ -47,11 +65,26 @@ export default function LoginPage() {
 
     if (authData?.user) {
       // Just check the database directly instead of rewriting it
-      const { data: currentProfile } = await supabase.from('profiles').select('role').eq('id', authData.user.id).single()
+      const { data: currentProfile } = await supabase.from('profiles').select('role').eq('id', authData.user.id).maybeSingle()
+      
+      let finalRole = currentProfile?.role
+
+      if (!currentProfile) {
+        const isAdmin = email.toLowerCase().includes('admin') || email.toLowerCase() === 'abc12051004@gmail.com';
+        finalRole = isAdmin ? 'admin' : 'user'
+        
+        await supabase.from('profiles').upsert({
+          id: authData.user.id,
+          email: email,
+          role: finalRole,
+          username: authData.user.user_metadata?.username || '',
+          fullname: authData.user.user_metadata?.full_name || '',
+          phone_no: authData.user.phone || ''
+        })
+      }
       
       toast.success('Successfully logged in!')
-      const isUserAdmin = currentProfile?.role === 'admin'
-      router.push(isUserAdmin ? '/admin' : '/home')
+      router.push(finalRole === 'admin' ? '/admin' : '/home')
       router.refresh()
     }
   }

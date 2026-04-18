@@ -16,10 +16,7 @@ export function useAuth() {
       setUser(session?.user ?? null)
       setLoading(false)
       
-      // Catch token redirects that miss the designated route
-      if (typeof window !== 'undefined' && window.location.hash.includes('type=recovery')) {
-        window.location.href = '/update-password'
-      }
+      // Supabase automatically parses and handles the hash token on its own, so we don't need to manually redirect or strip it.
     })
 
     // Listen for auth changes
@@ -30,8 +27,10 @@ export function useAuth() {
         setLoading(false)
         
         // Native Supabase Recovery Event
-        if (_event === 'PASSWORD_RECOVERY') {
-          window.location.href = '/update-password'
+        if (_event === 'PASSWORD_RECOVERY' && typeof window !== 'undefined') {
+          if (window.location.pathname !== '/update-password') {
+            window.location.href = '/update-password'
+          }
         }
       }
     )

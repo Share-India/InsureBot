@@ -29,14 +29,16 @@ export async function POST(request: NextRequest) {
       }
     })
 
+    const cleanEmail = email.trim()
+
     // Look up the email directly in the profiles table using Service Role
     const { data: profileCheck, error: profileError } = await supabaseAdmin
       .from('profiles')
       .select('email')
-      .eq('email', email)
-      .single()
+      .ilike('email', cleanEmail)
+      .limit(1)
 
-    if (profileError || !profileCheck) {
+    if (profileError || !profileCheck || profileCheck.length === 0) {
       return NextResponse.json({ exists: false })
     }
 
