@@ -28,7 +28,8 @@ export default function LoginPage() {
 
         // Lazy creation if profile doesn't exist (e.g. they just finished Email Verification)
         if (!currentProfile) {
-          const isAdmin = user.email.toLowerCase().includes('admin') || user.email.toLowerCase() === 'abc12051004@gmail.com';
+          const userEmail = user.email || '';
+          const isAdmin = userEmail.toLowerCase().includes('admin') || userEmail.toLowerCase() === 'abc12051004@gmail.com';
           finalRole = isAdmin ? 'admin' : 'user'
           
           await supabase.from('profiles').upsert({
