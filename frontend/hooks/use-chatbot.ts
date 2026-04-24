@@ -35,14 +35,16 @@ export function useChatBot() {
     setCurrentChatId(chatId)
 
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
-      const response = await fetch(`${BACKEND_URL}/api/chats/${chatId}/messages`);
-      
-      if (!response.ok) {
-        throw new Error('Backend returned ' + response.status);
+      const { data, error } = await supabase
+        .from('messages')
+        .select('*')
+        .eq('chat_id', chatId)
+        .order('created_at', { ascending: true });
+
+      if (error) {
+        throw new Error('Supabase returned ' + error.message);
       }
       
-      const data = await response.json();
       setMessages(data.map((msg: any) => ({
         id: msg.id,
         role: msg.role === 'assistant' ? 'model' : 'user', // Match backend/UI expectations
@@ -95,6 +97,40 @@ export function useChatBot() {
         }
       }
 
+      const { data: sessionData } = await supabase.auth.getSession()
+      
+      let activeChatId = currentChatId;
+      
+      try {
+        // Native Supabase insert: Chat creation bypasses backend RLS issues
+        if (!activeChatId) {
+          const chatTitle = userContent.trim().substring(0, 40) + '...';
+          const { data: chatData, error: chatError } = await supabase.from('chats').insert({
+            user_id: user.id,
+            title: chatTitle
+          }).select('id').single();
+          
+          if (chatError) throw chatError;
+          if (chatData) {
+            activeChatId = chatData.id;
+            setCurrentChatId(activeChatId);
+            setSidebarTrigger(prev => prev + 1);
+          }
+        }
+        
+        // Native Supabase insert: User Message
+        if (activeChatId) {
+          await supabase.from('messages').insert({
+            chat_id: activeChatId,
+            role: 'user',
+            content: userContent
+          });
+        }
+      } catch (dbErr) {
+        console.error("Local DB Insert failed:", dbErr);
+        toast.error("Could not save chat to database");
+      }
+
       const messagesForAPI = [...messages, newUserMessage]
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -107,7 +143,8 @@ export function useChatBot() {
             content: msg.content,
           })),
           user_id: user.id,
-          chat_id: currentChatId,
+          chat_id: activeChatId,
+          access_token: sessionData?.session?.access_token,
         }),
       })
 
@@ -118,11 +155,12 @@ export function useChatBot() {
 
       const data = await response.json()
       const aiResponse = data.response || ''
-      const newChatId = data.chat_id
 
-      // If a new chat was created by the backend, update our state
-      if (newChatId && newChatId !== currentChatId) {
-        setCurrentChatId(newChatId)
+      // We no longer rely on backend for chat creation
+      const resolvedChatId = data.chat_id || activeChatId;
+
+      if (resolvedChatId && resolvedChatId !== currentChatId) {
+        setCurrentChatId(resolvedChatId)
         setSidebarTrigger(prev => prev + 1)
       }
 
@@ -132,6 +170,19 @@ export function useChatBot() {
       }
 
       setMessages((prev) => [...prev, newAiMessage])
+      
+      // Native Supabase insert: AI Message
+      if (resolvedChatId) {
+        try {
+          await supabase.from('messages').insert({
+             chat_id: resolvedChatId,
+             role: 'assistant',
+             content: aiResponse
+          });
+        } catch (dbErrAI) {
+           console.error("Local DB Insert for AI failed:", dbErrAI);
+        }
+      }
 
       if (data.recommendations) {
         setRecommendations(data.recommendations)

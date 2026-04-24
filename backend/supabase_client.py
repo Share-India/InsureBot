@@ -16,5 +16,6 @@ if not url or not key:
 supabase: Client = create_client(url, key)
 
 # Initialize the Admin Supabase client (Bypasses RLS)
-# Use service_role_key if available, otherwise fallback to anon key
-supabase_admin: Client = create_client(url, service_role_key if service_role_key else key)
+# Using 'key' (anon) because the provided service_role_key in .env represents a CLI token, which is invalid for PostgREST.
+valid_key = service_role_key if (service_role_key and service_role_key.startswith("ey")) else key
+supabase_admin: Client = create_client(url, valid_key)

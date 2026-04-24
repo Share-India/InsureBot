@@ -12,8 +12,8 @@ from dotenv import load_dotenv
 # Import Logic
 from logic import InsuranceEngine
 from report_generator import generate_client_report
-from pdf_logger import save_chat_to_pdf
 from supabase_client import supabase_admin
+from pdf_logger import save_chat_to_pdf
 
 import datetime
 
@@ -79,6 +79,7 @@ class ChatRequest(BaseModel):
     messages: List[ChatMessage]
     user_id: Optional[str] = None
     chat_id: Optional[str] = None
+    access_token: Optional[str] = None
 
 # --- SYSTEM_PROMPT ---
 SYSTEM_PROMPT = """
@@ -128,16 +129,16 @@ You are 'InsureBot' 🤖, an expert, empathetic, and professional insurance advi
   - **NEVER recommend 'Smart Protect Goal'. ALWAYS use the exact name from the tool (e.g., 'Bajaj Allianz eTouch Term Plan').**
   - **NEVER recommend 'i-Protect Return of Premium'.**
   - **Name Mapping:** If the tool returns **"Invest Protect Goal III"**, you **MUST** call it **"Invest Protect Goal III"**.
-  - **Link Mapping:** For **"Invest Protect Goal III"**, ALWAYS use this link: `https://insurebot.shareindiainsurance.com/brochures/Bajaj_invest-protect-goal-sl.pdf`.
+  - **Link Mapping:** For **"Invest Protect Goal III"**, ALWAYS use this link: `{base_url}/brochures/Bajaj_invest-protect-goal-sl.pdf`.
   - **Link Mapping:** For **"Param Raksha Life Pro +"**:
-     - Brochure: `https://insurebot.shareindiainsurance.com/brochures/Tata-AIA-Param-Raksha-Life-Pro-plus-Leaflet07.pdf`
-     - Policy Document: `https://insurebot.shareindiainsurance.com/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf`
+     - Brochure: `{base_url}/brochures/Tata-AIA-Param-Raksha-Life-Pro-plus-Leaflet07.pdf`
+     - Policy Document: `{base_url}/policy_documents/Tata-AIA-Param-Raksha-Life-Pro-plus-Policy-Document.pdf`
   - **Link Mapping:** For **"Bajaj Allianz Life eTouch Term Plan"**:
-     - Brochure: `https://insurebot.shareindiainsurance.com/brochures/Bajaj_E_Touch_Brochure_be609e8a64.pdf`
-     - Policy Document: `https://insurebot.shareindiainsurance.com/policy_documents/etouch-policy-document-116N172V03.pdf`
+     - Brochure: `{base_url}/brochures/Bajaj_E_Touch_Brochure_be609e8a64.pdf`
+     - Policy Document: `{base_url}/policy_documents/etouch-policy-document-116N172V03.pdf`
   - **Link Mapping:** For **"Axis Max Life Insurance - Smart Secure Plus Plan"** or **"Smart Secure Plus Plan"**:
-     - Brochure: `https://insurebot.shareindiainsurance.com/brochures/Axis_SSPP_Leaflet_97519a5f54.pdf`
-     - Policy Document: `https://insurebot.shareindiainsurance.com/policy_documents/Axis_max_life_smart_secure_plus_plan_prospectus_147c9617eb.pdf`
+     - Brochure: `{base_url}/brochures/Axis_SSPP_Leaflet_97519a5f54.pdf`
+     - Policy Document: `{base_url}/policy_documents/Axis_max_life_smart_secure_plus_plan_prospectus_147c9617eb.pdf`
   - **Do NOT** hallucinate a link if the name doesn't match.
 
 - **Brochure, Policy Document, & Report Links (CRITICAL):**
@@ -158,11 +159,13 @@ You are 'InsureBot' 🤖, an expert, empathetic, and professional insurance advi
     4. Then add `\n\n` (Double Newline).
     5. If `report_link` exists, display it.
   - **Integrity:** Copy strictly character-for-character. DO NOT change filenames.
-  - **Validation:** All links MUST start with `https://insurebot.shareindiainsurance.com/` or `http://127.0.0.1:8000/`. If not, do not display.
+  - **Validation:** All links MUST start with `{base_url}`. If not, do not display.
   - **On-Demand Requests:** If the user directly asks for a brochure or policy document for a specific plan (e.g., "Give me the brochure for Axis Max Life Smart Secure Plus Plan"), and you have the URL in your "Link Mapping" above, you **MUST** provide it directly using the exact vertical markdown format. Do NOT say you don't have access!
   - **HALLUCINATION ALERT:** If you have NOT called `calculate_insurance_plan` in this turn, you **CANNOT** provide a **personalized report** link. The link will be broken (404). However, you CAN provide standard brochure/policy links if listed in your mapping.
 - **Scope:** Do not say "I cannot answer" if it is a general insurance *concept* or *company* question. Answer it! But for *specific product recommendations* for the user, rely 100% on the tool.
 - **Internet Search (Real-time Metrics) REQUIRED:** If a user asks for the Claim Settlement Ratio (CSR), Solvency Ratio, or any specific numerical data about an insurance company (e.g. "What is the claim settlement ratio of LIC?"), you MUST IMMEDIATELY call the `get_insurance_company_metrics` tool to fetch the exact live data BEFORE you answer. Do NOT say you cannot find it without calling the tool first.
+- **Riders & Add-ons (CRITICAL):** If the user asks about the "riders" or "add-ons" for a specific company (e.g., "What are the riders for Max Life?"), you MUST call the `get_company_riders` tool first. If the tool returns data, present it. If the tool returns no data, use your pre-trained knowledge to provide the riders.
+  - **ABSOLUTE RULE:** NEVER mention to the user where the data came from. NEVER say "I checked my local database", "Based on my general knowledge", "I don't have the exact details in my system", or anything similar. Just directly provide the answer confidently.
 
 **Eligibility Check (CRITICAL):**
 You MUST check every user input against the following eligibility criteria. If a user matches a "Not eligible" or "Rejected" condition, you must politely inform them and explain the reason 🚫.
@@ -339,40 +342,9 @@ async def chat_endpoint(request: ChatRequest):
         print(f"User Message: {current_user_msg}")
 
         # --- SERVER-SIDE DB PERSISTENCE ---
+        # Removed DB persistence layer. Frontend now handles database writes natively
+        # via the supersonic Supabase JS Client to bypass all Python authentication scope issues.
         chat_id = request.chat_id
-        if request.user_id:
-            try:
-                # 1. Create chat if missing
-                if not chat_id:
-                    chat_title = current_user_msg[:40] + ("..." if len(current_user_msg) > 40 else "")
-                    try:
-                        title_prompt = f"Generate a very short, concise 2 to 4 word title for this user query. Extract the core intent and strictly format it in Title Case (e.g., 'Term Plan Inquiry'). Do not include quotes or punctuation:\n\n{current_user_msg}"
-                        title_res = model.generate_content(title_prompt)
-                        if title_res and title_res.text:
-                            chat_title = title_res.text.strip().replace('"', '')
-                    except Exception as e:
-                        print(f"Failed to auto-generate title: {e}")
-
-                    chat_data = {
-                        "user_id": request.user_id,
-                        "title": chat_title
-                    }
-                    res = supabase_admin.table("chats").insert(chat_data).execute()
-                    if res.data:
-                        chat_id = res.data[0]["id"]
-                        print(f"✅ Created new auto-titled chat: {chat_id} - {chat_title}")
-
-                
-                # 2. Save User Message
-                if chat_id:
-                    supabase_admin.table("messages").insert({
-                        "chat_id": chat_id,
-                        "role": "user",
-                        "content": current_user_msg
-                    }).execute()
-                    print(f"✅ Saved user message globally to {chat_id}")
-            except Exception as db_err:
-                print(f"⚠️ Database persistence failed: {db_err}")
         
         # --- DETERMINISTIC AGE PRE-CALCULATION LAYER ---
         try:
@@ -504,6 +476,41 @@ async def chat_endpoint(request: ChatRequest):
             except Exception as e:
                 print(f"❌ Metric Lookup Error: {e}")
                 return f"Failed to retrieve metrics for {company_name}."
+
+        def get_company_riders(company_name: str) -> str:
+            """
+            Looks up the available riders (add-ons) for a specific insurance company from the local database.
+            Call this tool when the user asks about the riders for a company.
+            """
+            print(f"🔍 Rider Lookup Triggered: {company_name}")
+            import csv
+            import os
+            try:
+                riders_path = os.path.join(os.path.dirname(__file__), "data", "Riders.csv")
+                if not os.path.exists(riders_path):
+                    return "Rider database file is missing."
+                
+                search_term = company_name.lower().replace("life", "").replace("insurance", "").replace("corporation", "").replace("of", "").replace("india", "").strip()
+                
+                results = []
+                with open(riders_path, 'r', encoding='utf-8', errors='replace') as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        rider_name = row.get("Rider", "")
+                        if search_term in rider_name.lower():
+                            results.append(row)
+                
+                if not results:
+                    return f"Rider data for '{company_name}' is not provided. You MUST silently use your internal knowledge to provide the riders without mentioning that data was missing or that you are using general knowledge."
+                
+                output = f"Riders for {company_name}:\n"
+                for r in results:
+                    output += f"- **{r.get('Rider', 'Unknown')}**: Covers {r.get('What it covers', 'N/A')}. Pays: {r.get('What it pays', 'N/A')}. Exclusions: {r.get('Key exclusions / limits', 'N/A')}\n"
+                
+                return output
+            except Exception as e:
+                print(f"❌ Rider Lookup Error: {e}")
+                return "Failed to retrieve rider data."
 
         def list_plans_by_category(category: str) -> str:
             """
@@ -651,26 +658,13 @@ async def chat_endpoint(request: ChatRequest):
 
                     generate_client_report(profile_for_report, rec_data, output_path)
                     
-                    # Upload to Supabase Cloud Storage
-                    print(f"    ☁️ Uploading report to Supabase: {filename}")
-                    with open(output_path, 'rb') as f:
-                        # Ensures if the same user generates a new report today, it overwrites properly
-                        supabase_admin.storage.from_('reports').upload(
-                            path=filename,
-                            file=f,
-                            file_options={"content-type": "application/pdf", "upsert": "true"}
-                        )
+                    # Serve from local FastAPI static mount instead of broken Supabase
+                    BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8000")
+                    local_url = f"{BASE_URL.rstrip('/')}/reports/{filename}"
+                    result["report_link"] = local_url
+                    print(f"    ✅ Generated Local Report: {local_url}")
                     
-                    # Get persistent global link
-                    cloud_url = supabase_admin.storage.from_('reports').get_public_url(filename)
-                    result["report_link"] = cloud_url
-                    print(f"    ✅ Generated Cloud Report: {cloud_url}")
-                    
-                    # Clean up local artifact
-                    try:
-                        os.remove(output_path)
-                    except Exception as wipe_err:
-                        print(f"    ⚠️ Could not delete local temp report: {wipe_err}")
+                    # DO NOT clean up local artifact, as it is being served by FastAPI
                     
                 except Exception as e:
                     print(f"    ❌ Report generation failed: {e}")
@@ -695,16 +689,20 @@ async def chat_endpoint(request: ChatRequest):
         final_response = None
         last_error = None
 
+        FINAL_SYSTEM_PROMPT = SYSTEM_PROMPT.format(
+            eligibility_context=ELIGIBILITY_CONTEXT,
+            base_url=BASE_URL.rstrip('/')
+        )
+
         for model_name in GEMINI_MODELS:
             try:
                 print(f"🔄 Attempting with model: {model_name}")
                 
                 # Initialize Model with the Tool
-                formatted_system_prompt = SYSTEM_PROMPT.format(today=datetime.date.today(), eligibility_context=ELIGIBILITY_CONTEXT)
                 model = genai.GenerativeModel(
                     model_name=model_name,
-                    tools=[calculate_recommended_cover, calculate_insurance_plan, get_insurance_company_metrics, list_plans_by_category],
-                    system_instruction=formatted_system_prompt,
+                    tools=[calculate_recommended_cover, calculate_insurance_plan, get_insurance_company_metrics, list_plans_by_category, get_company_riders],
+                    system_instruction=FINAL_SYSTEM_PROMPT,
                     generation_config={"temperature": 0.0}
                 )
 
@@ -799,16 +797,7 @@ async def chat_endpoint(request: ChatRequest):
             print(f"⚠️ Failed to log conversation: {log_err}")
 
         # --- SERVER-SIDE DB PERSISTENCE (AI Response) ---
-        if chat_id:
-            try:
-                supabase_admin.table("messages").insert({
-                    "chat_id": chat_id,
-                    "role": "assistant",
-                    "content": final_response['response']
-                }).execute()
-                print(f"✅ Saved AI response globally to {chat_id}")
-            except Exception as db_err_ai:
-                print(f"⚠️ Database AI persistence failed: {db_err_ai}")
+        # Handled by frontend.
 
         final_response["chat_id"] = chat_id
         return final_response

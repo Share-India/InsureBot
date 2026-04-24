@@ -60,6 +60,7 @@
     "react-markdown": "^9.0.1",
     "react-resizable-panels": "^2.1.7",
     "recharts": "^2.15.4",
+    "remark-gfm": "^4.0.1",
     "shadcn": "^4.0.8",
     "simli-client": "^2.0.0",
     "sonner": "^1.7.4",

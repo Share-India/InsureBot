@@ -11,6 +11,7 @@ interface ChatRequest {
   messages: ChatMessage[]
   user_id?: string
   chat_id?: string
+  access_token?: string
 }
 
 export async function POST(request: NextRequest) {
@@ -33,6 +34,7 @@ export async function POST(request: NextRequest) {
         messages: body.messages,
         user_id: body.user_id,
         chat_id: body.chat_id,
+        access_token: body.access_token,
       }),
     })
 

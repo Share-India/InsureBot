@@ -54,16 +54,19 @@ export function ChatSidebar({ currentChatId, onChatSelect, onNewChat, triggerUpd
       if (!user) return
       
       try {
-        const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
-        const response = await fetch(`${BACKEND_URL}/api/chats/${user.id}`);
-        if (response.ok) {
-          const data = await response.json();
+        const { data, error } = await supabase
+          .from('chats')
+          .select('id, title, created_at')
+          .eq('user_id', user.id)
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          console.error("Failed to fetch chats from supabase:", error);
+        } else if (data) {
           setChats(data);
-        } else {
-          console.error("Failed to fetch chats from backend:", response.status);
         }
       } catch (err) {
-        console.error("Error communicating with backend for chats:", err);
+        console.error("Error communicating with supabase for chats:", err);
       }
     }
     fetchChats()
@@ -72,11 +75,11 @@ export function ChatSidebar({ currentChatId, onChatSelect, onNewChat, triggerUpd
   const deleteChat = async (e: React.MouseEvent, chatId: string) => {
     e.stopPropagation()
     try {
-      const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
-      const response = await fetch(`${BACKEND_URL}/api/chats/${chatId}`, { method: 'DELETE' });
+      const { error } = await supabase.from('chats').delete().eq('id', chatId);
       
-      if (!response.ok) {
+      if (error) {
         toast.error("Failed to delete chat")
+        console.error(error);
       } else {
         setChats(prev => prev.filter(c => c.id !== chatId))
         if (currentChatId === chatId) {

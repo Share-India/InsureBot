@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Volume2, Square, Bot, User } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 interface MessageBubbleProps {
   role: 'user' | 'model'
@@ -38,10 +39,15 @@ export default function MessageBubble({ role, content, onSpeak, isSpeaking, onSt
             <div className="flex items-start justify-between gap-3 mb-2">
               <div className="flex-1">
                 <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
                   className="prose prose-sm max-w-none prose-p:leading-relaxed prose-strong:text-blue-600 prose-a:text-blue-500 prose-a:font-medium text-slate-700"
                   components={{
                     strong: ({ node, ...props }) => <span className="font-bold text-slate-900" {...props} />,
-                    a: ({ node, ...props }) => <a target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline decoration-blue-200 underline-offset-2" {...props} />
+                    a: ({ node, ...props }) => <a target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline decoration-blue-200 underline-offset-2" {...props} />,
+                    table: ({ node, ...props }) => <div className="overflow-x-auto my-4 rounded-lg border border-slate-200"><table className="min-w-full divide-y divide-slate-200" {...props} /></div>,
+                    thead: ({ node, ...props }) => <thead className="bg-slate-50" {...props} />,
+                    th: ({ node, ...props }) => <th className="px-4 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider bg-slate-50" {...props} />,
+                    td: ({ node, ...props }) => <td className="px-4 py-3 text-sm text-slate-600 border-t border-slate-100" {...props} />
                   }}
                 >
                   {content}
